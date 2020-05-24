@@ -29,4 +29,8 @@ class PersonnelController extends Controller
         return view('/borderLedger/management', ['pers' => $personnel]);
     }
 
+    public function ledger(){
+        return view('/borderLedger/ledger');
+    }
+
 }

@@ -49,11 +49,16 @@ html, body {
     margin-bottom: 30px;
 }
 
+.logo {
+    margin-bottom: 30px;
+}
+
+
 .description {
     border: 5px dashed black ;
     color: azure;
     width: 500px;
-    background-color: #636b6f;
+    background: #636b6f;
 }
 
 footer {
