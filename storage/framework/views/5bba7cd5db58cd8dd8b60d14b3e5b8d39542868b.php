@@ -6,7 +6,7 @@
 
     <div class="registration">
         <h1>Creat a New Personnel Account</h1>
-        <form action="" method="POST">
+        <form action="borderLedger/management" method="POST">
         <label for="first_name">First Name:</label>
         <input type="text" id="first_name" name="first_name">
 

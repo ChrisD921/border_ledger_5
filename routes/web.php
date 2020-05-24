@@ -15,10 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PersonnelController@index');
 
-
 Route::get('/borderLedger/login', 'PersonnelController@login');
 
+Route::post('/borderLedger/management' , 'PersonnelController@store' );
+
 Route::get('/borderLedger/management', 'PersonnelController@admin');
+
 
 // Route::get('/admin', function () {
 //     return view('management');
