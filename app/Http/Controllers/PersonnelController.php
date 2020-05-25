@@ -46,4 +46,12 @@ class PersonnelController extends Controller
 
         return redirect('/borderLedger/management');
     }
+    public function ledger(){
+        return view('/borderLedger/ledger');
+    }
+
+    public function profile(){
+        return view('/borderLedger/profile');
+    }
+
 }

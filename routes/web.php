@@ -22,6 +22,10 @@ Route::post('/borderLedger/management' , 'PersonnelController@store' );
 Route::get('/borderLedger/management', 'PersonnelController@show');
 
 
+Route::get('/borderLedger/ledger', 'PersonnelController@ledger');
+
+Route::get('/borderLedger/profile', 'PersonnelController@profile');
+
 // Route::get('/admin', function () {
 //     return view('management');
 // });

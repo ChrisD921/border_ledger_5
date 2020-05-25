@@ -49,19 +49,28 @@ html, body {
     margin-bottom: 30px;
 }
 
+.logo {
+    margin-bottom: 30px;
+}
+
 .description {
     border: 5px dashed black ;
     color: azure;
     width: 500px;
-    background-color: #636b6f;
+    background: #636b6f;
 }
+
+.profile {
+    margin-top: 100px;
+    color: floralwhite;
+}
+
 
 footer {
     color: floralwhite;
     text-align: center;
     background-color: #636b6f;
     padding: 15px;
-     
 }
 
 .loginButton {
