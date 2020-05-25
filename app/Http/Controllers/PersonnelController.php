@@ -6,10 +6,17 @@ use Illuminate\Http\Request;
 use App\Personnel;
 class PersonnelController extends Controller
 {
-    public function index(){
+    public function indexhome(){
 
         return view('/borderledger/index');
     }
+
+
+    public function index() {
+        $personnel = Personnel::paginate(5);
+        return view('/borderLedger/management', compact('personnel'));
+    }
+
 
     public function login(){
         return view('/borderLedger/login');
@@ -45,29 +52,6 @@ class PersonnelController extends Controller
 
 
         return redirect('/borderLedger/management')->with('success_msg' , 'New Personnel Account Successfully Created!');
-    }
-    public function ledger(){
-        $passerby = new Passerby();
-
-        $passerby->inputFName= request('inputFName');
-        $passerby->inputLName= request('inputLName');
-        $passerby->inputAge= request('inputAge');
-        $passerby->inputIdType= request('inputIdType');
-        $passerby->inputTransMode= request('inputTransMode');
-        $passerby->inputPlateNum= request('inputPlateNum');
-        $passerby->inputPurpose= request('inputPurpose');
-        $passerby->inputDes= request('inputDes');
-        
-
-        $passerby->save();
-        
-
-
-        return redirect('/borderLedger/ledger')->with('success_msg' , 'New Passerby Entry Added!');
-
-
-
-       // return view('/borderLedger/ledger');
     }
 
     public function profile(){

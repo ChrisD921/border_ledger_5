@@ -13,13 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/borderLedger/index', 'PersonnelController@index');
+Route::get('/borderLedger/index', 'PersonnelController@indexhome');
 
 Route::get('/borderLedger/login', 'PersonnelController@login');
 
+Route::get('/borderLedger/management', 'PersonnelController@index');
+
 Route::post('/borderLedger/management' , 'PersonnelController@store' );
 
-Route::get('/borderLedger/management', 'PersonnelController@show');
+
 
 Route::get('/borderLedger/ledger', 'PasserbyController@index');
 Route::post('/borderLedger/ledger', 'PasserbyController@store');

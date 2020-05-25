@@ -295,7 +295,7 @@
             <div class="container mt-2 mb-3">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <h4 class="text-center mb-5"> Pagination Example in Laravel 6 </h4>
+                        <h4 class="text-center mb-5"> Passerby Entries </h4>
                         <table class="table table-striped mt-2">
                             <thead>
                                 <th> Date Time</th>
@@ -303,6 +303,7 @@
                                 <th> Full Name</th>
                                 <th> Direction</th>
                                 <th> Plate Number</th>
+                                <th> </th>
                             </thead>
                             <tbody>
                                 @foreach($passerby as $passerbys)
@@ -319,6 +320,7 @@
                                     </td>
                                     </td>
                                     <td>{{$passerbys->inputPlateNum}} </td>
+                                    <td><button type="menu">View (TODO)</button></td>
                                 </tr>
                                 @endforeach
                             </tbody>
