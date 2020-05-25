@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="flex-center position-ref full-height">
-
+<p class="msg"> {{ session('success_msg') }}</p>
     <div class="registration">
         <h1>Create a New Personnel Account</h1>
         <form action="/borderLedger/management" method="POST">

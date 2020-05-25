@@ -44,7 +44,7 @@ class PersonnelController extends Controller
         
 
 
-        return redirect('/borderLedger/management');
+        return redirect('/borderLedger/management')->with('success_msg' , 'New Personnel Account Successfully Created!');
     }
     public function ledger(){
         return view('/borderLedger/ledger');

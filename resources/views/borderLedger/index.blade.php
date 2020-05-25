@@ -27,7 +27,8 @@
                 <br><br>
                 The web app will be used by the personnel who are guarding the border. It allows them to encode details of people who are going in and out of the border such as name, ID Card, purpose, where they are going. </p>
         </div>
-        <a href="/borderLedger/management">Add a Personnel Account</a>
+        <a href="/borderLedger/management">Add a Personnel Account</a><br>
+        <a href="/borderLedger/ledger">Add a Passerby Entry</a><br>
         <button class="loginButton" href='/borderLedger/login'> Login </button>
 
 
