@@ -5,8 +5,9 @@
 <div class="flex-center position-ref full-height">
 
     <div class="registration">
-        <h1>Creat a New Personnel Account</h1>
-        <form action="borderLedger/management" method="POST">
+        <h1>Create a New Personnel Account</h1>
+        <form action="/borderLedger/management" method="POST">
+        @csrf
         <label for="first_name">First Name:</label>
         <input type="text" id="first_name" name="first_name">
 
@@ -26,13 +27,13 @@
 
     <div class="content">
         <p>Hello this is the Managment screen!</p>
-    @foreach ($pers as $personnel)
+    @foreach ($pers as $personnels)
         
     
         <div class="description">
-           Name: {{$personnel->first_name}} {{$personnel->last_name}} <br>
-            Date of Birth:{{$personnel->date}}<br> 
-            Password:{{$personnel->password}}
+           Name: {{$personnels->first_name}} {{$personnels->last_name}} <br>
+            Date of Birth:{{$personnels->date_of_birth}}<br> 
+            Password:{{$personnels->password}}
         </div>
     @endforeach
         {{-- <button class="loginButton" href='/borderLedger/login'> Login </button> --}}

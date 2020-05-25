@@ -5,8 +5,9 @@
 <div class="flex-center position-ref full-height">
 
     <div class="registration">
-        <h1>Creat a New Personnel Account</h1>
-        <form action="borderLedger/management" method="POST">
+        <h1>Create a New Personnel Account</h1>
+        <form action="/borderLedger/management" method="POST">
+        <?php echo csrf_field(); ?>
         <label for="first_name">First Name:</label>
         <input type="text" id="first_name" name="first_name">
 
@@ -26,13 +27,13 @@
 
     <div class="content">
         <p>Hello this is the Managment screen!</p>
-    <?php $__currentLoopData = $pers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $personnel): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <?php $__currentLoopData = $pers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $personnels): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         
     
         <div class="description">
-           Name: <?php echo e($personnel->first_name); ?> <?php echo e($personnel->last_name); ?> <br>
-            Date of Birth:<?php echo e($personnel->date); ?><br> 
-            Password:<?php echo e($personnel->password); ?>
+           Name: <?php echo e($personnels->first_name); ?> <?php echo e($personnels->last_name); ?> <br>
+            Date of Birth:<?php echo e($personnels->date_of_birth); ?><br> 
+            Password:<?php echo e($personnels->password); ?>
 
         </div>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

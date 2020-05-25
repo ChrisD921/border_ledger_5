@@ -15,7 +15,7 @@ class PersonnelController extends Controller
         return view('/borderLedger/login');
     }
 
-    public function admin(){
+    public function show(){
         //$personnel = Personnel::all();
 
         //Orders by whatever data you want... Adding "desc" reverses the order...
@@ -32,6 +32,18 @@ class PersonnelController extends Controller
 
     public function store(){
 
-        return \redirect('/management');
+
+        $personnel = new Personnel();
+
+        $personnel->first_name = request('first_name');
+        $personnel->last_name = request('last_name');
+        $personnel->date_of_birth = request('date_of_birth');
+        $personnel->password = request('password');
+
+        $personnel->save();
+        
+
+
+        return redirect('/borderLedger/management');
     }
 }
