@@ -33,4 +33,8 @@ class PersonnelController extends Controller
         return view('/borderLedger/ledger');
     }
 
+    public function profile(){
+        return view('/borderLedger/profile');
+    }
+
 }

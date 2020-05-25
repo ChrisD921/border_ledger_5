@@ -21,10 +21,9 @@
         <div  class="logo">
             <img src="/img/BorderLedger5.png" alt="BorderLedger5Logo">
         </div>
-
-        <div class="description jumbotron">
-            <!-- <p>Hello this is the login screen!</p>     -->
-            <form class="form-signin">
+        
+        <div class="description" >
+            <form action="" style="padding: 30px">
                 <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
                 <div class="form-group">
                     <label for="inputEmail" class="sr-only">Email address</label>
@@ -37,9 +36,6 @@
                 <button class="btn btn-dark btn-lg" type="submit">Sign in</button>
             </form>
         </div>
-
-        
-
 
     </div>
 </div>

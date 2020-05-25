@@ -6,6 +6,9 @@
 
         <title>{{config('app.name','Border Ledger')}}</title>
 
+        <!-- Title Icon -->
+        <link rel="icon" href="/img/BorderLedgerIcon.png">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
