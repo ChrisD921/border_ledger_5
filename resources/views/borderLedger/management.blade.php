@@ -23,7 +23,7 @@
         
         <button type="submit" value="Add User">Submit</button>
         </form>    
-    </div>    
+    </div> 
 
     <div class="content">
         <p>Hello this is the Managment screen!</p>

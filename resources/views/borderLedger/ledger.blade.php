@@ -23,8 +23,8 @@
                         </div>
 
                         <div class="modal-body">
-                            <form>
-
+                            <form action="/borderLedger/ledger" method="post">
+                                @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <div class="row">
@@ -32,7 +32,7 @@
                                                 <label for="inputFName">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputFName" placeholder="">
+                                                <input type="text" class="form-control" id="inputFName" name="inputFName" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -42,7 +42,7 @@
                                                 <label for="inputLName">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputLName" placeholder="">
+                                                <input type="text" class="form-control" id="inputLName" name="inputLName" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -55,7 +55,7 @@
                                                 <label for="inputAge">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputAge" placeholder="">
+                                                <input type="text" class="form-control" id="inputAge" name="inputAge" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@
                                                 <label for="inputIdType">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputIdType" placeholder="">
+                                                <input type="text" class="form-control" id="inputIdType"  name="inputIdType" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@
                                                 <label for="inputIdNum">ID Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputIdNum" placeholder="">
+                                                <input type="text" class="form-control" id="inputIdNum" name="inputIdNum" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@
                                                 <label for="inputTransMode">Mode of Transport</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="inputTransMode" class="form-control">
+                                                <select id="inputTransMode" name="inputTransMode" class="form-control">
                                                     <option selected>Choose...</option>
                                                     <option value="1">Walking</option>
                                                     <option value="2">Delivery Vehicle</option>
@@ -108,7 +108,7 @@
                                                 <label for="inputPlateNum">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputPlateNum" placeholder="">
+                                                <input type="text" class="form-control" id="inputPlateNum" name="inputPlateNum" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -120,7 +120,7 @@
                                             <label for="inputPurpose">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                        <textarea class="form-control" id="inputPurpose" rows="3"></textarea>
+                                        <textarea class="form-control" id="inputPurpose" name="inputPurpose" rows="3"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -133,19 +133,20 @@
                                                     <label for="inputDes">Destination</label>
                                                 </div>
                                                 <div class="col-8">
-                                                    <input type="text" class="form-control" id="inputDes" placeholder="">
+                                                    <input type="text" class="form-control" id="inputDes" name="inputDes" placeholder="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
+                                <input type="hidden" name="IngoingOrOutgoing" value="0">
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
                         </form>
                     </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-success">Submit</button>
-                    </div>
+                    
                     </div>
                 </div>
             </div>
@@ -163,8 +164,8 @@
                         </div>
 
                         <div class="modal-body">
-                            <form>
-
+                            <form action="/borderLedger/ledger" method="post">
+                                @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <div class="row">
@@ -172,7 +173,7 @@
                                                 <label for="inputFName">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputFName" placeholder="">
+                                                <input type="text" class="form-control" id="inputFName" name="inputFName" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -182,7 +183,7 @@
                                                 <label for="inputLName">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputLName" placeholder="">
+                                                <input type="text" class="form-control" id="inputLName" name="inputLName" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -195,7 +196,7 @@
                                                 <label for="inputAge">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputAge" placeholder="">
+                                                <input type="text" class="form-control" id="inputAge" name="inputAge" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -208,7 +209,7 @@
                                                 <label for="inputIdType">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputIdType" placeholder="">
+                                                <input type="text" class="form-control" id="inputIdType" name="inputIdType" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -218,7 +219,7 @@
                                                 <label for="inputIdNum">ID Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputIdNum" placeholder="">
+                                                <input type="text" class="form-control" id="inputIdNum" name="inputIdNum" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -231,7 +232,7 @@
                                                 <label for="inputTransMode">Mode of Transport</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="inputTransMode" class="form-control">
+                                                <select id="inputTransMode" name="inputTransMode" class="form-control">
                                                     <option selected>Choose...</option>
                                                     <option value="1">Walking</option>
                                                     <option value="2">Delivery Vehicle</option>
@@ -248,7 +249,7 @@
                                                 <label for="inputPlateNum">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputPlateNum" placeholder="">
+                                                <input type="text" class="form-control" id="inputPlateNum" name="inputPlateNum" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -260,7 +261,7 @@
                                             <label for="inputPurpose">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                        <textarea class="form-control" id="inputPurpose" rows="3"></textarea>
+                                        <textarea class="form-control" id="inputPurpose" name="inputPurpose" rows="3"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -273,19 +274,20 @@
                                                     <label for="inputDes">Destination</label>
                                                 </div>
                                                 <div class="col-8">
-                                                    <input type="text" class="form-control" id="inputDes" placeholder="">
+                                                    <input type="text" class="form-control" id="inputDes" name="inputDes" placeholder="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
+                                <input type="hidden" name="IngoingOrOutgoing" value="1">
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
                         </form>
                     </div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-success">Submit</button>
-                    </div>
+                   
                     </div>
                 </div>
             </div>
