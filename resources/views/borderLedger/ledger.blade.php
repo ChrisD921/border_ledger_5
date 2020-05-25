@@ -292,6 +292,28 @@
                 </div>
             </div>
 
+            {{-- We'll delete this part later and replace with Pagination 
+                This is just testing if the records will display!  --}}
+                @foreach ($pass as $passerbys)
+                <div class="description">
+                
+                    
+                
+                Name: {{$passerbys->inputFName}} {{$passerbys->inputLName}} <br>
+                Age: {{$passerbys->inputAge}}
+                Id Type: {{$passerbys->inputIdType}} <br>
+                Transportation: {{$passerbys->inputTransMode}}   
+                Plate Number: {{$passerbys->inputPlateNum}}
+                Purpose: {{$passerbys->inputPurpose}} <br> <br>
+                Destination: {{$passerbys->inputDes}} <br>
+                Ingoing/Outgoing: {{$passerbys->IngoingOrOutgoing}} <br>
+                Date of Input: {{$passerbys->created_at}}
+                passerbys
+        
+                </div>
+                @endforeach
+
+            
         </div>
     </section>
 

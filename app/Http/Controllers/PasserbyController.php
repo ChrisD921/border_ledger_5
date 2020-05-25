@@ -62,7 +62,10 @@ class PasserbyController extends Controller
      */
     public function show()
     {
-        return view('/borderLedger/ledger');
+
+        $passerby = Passerby::latest()->get();
+
+        return view('/borderLedger/ledger', ['pass' => $passerby]);
     }
 
     /**
