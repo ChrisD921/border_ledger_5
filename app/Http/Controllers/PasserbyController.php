@@ -11,6 +11,9 @@ class PasserbyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //This displays the page and allows the 
+    //Passerby data to be viewed in pages. (Pagination)
     public function index() {
         $passerby = Passerby::paginate(5);
         return view('/borderLedger/ledger', compact('passerby'));

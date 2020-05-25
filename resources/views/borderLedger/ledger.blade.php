@@ -291,90 +291,42 @@
                     </div>
                 </div>
             </div>
-
-            {{-- We'll delete this part later and replace with Pagination 
-                This is just testing if the records will display!  --}}
-                {{-- @foreach ($pass as $passerbys)
-                <div class="description">
-                
-                    
-                
-                Name: {{$passerbys->inputFName}} {{$passerbys->inputLName}} <br>
-                Age: {{$passerbys->inputAge}}
-                Id Type: {{$passerbys->inputIdType}} <br>
-                Transportation: {{$passerbys->inputTransMode}}   
-                Plate Number: {{$passerbys->inputPlateNum}}
-                Purpose: {{$passerbys->inputPurpose}} <br> <br>
-                Destination: {{$passerbys->inputDes}} <br>
-                Ingoing/Outgoing: {{$passerbys->IngoingOrOutgoing}} <br>
-                Date of Input: {{$passerbys->created_at}}
-                passerbys
-        
-                </div>
-                @endforeach --}}
-                
-                    {{-- <div>
-                        <tr>    
-                            <th>DateTime</th>
-                            <th>Hi</th>
-                            <th>Hi</th>
-                            <th>Hi</th>
-                            <th>Hi</th>  
-                            <th>Hi</th>
-                            <th>Hi</th>
-                            <th>Hi</th>
-                            <th>Hi</th>
-                            <th>Hi</th>
-                            <th>Hi</th>               
-                        </tr>
-                        @foreach($pass as $passerbys)
-                        <div>
-                            <tr>    
-                                <th>{{$passerbys->inputFName}}</th>
-                                <th>{{$passerbys->inputLName}}</th>
-                                <th>{{$passerbys->inputAge}}</th>
-                                <th>{{$passerbys->inputIdType}}</th>
-                                <th>{{$passerbys->inputTransMode}}</th>  
-                                <th>{{$passerbys->inputPlateNum}}</th>
-                                <th>{{$passerbys->inputPurpose}}</th>
-                                <th>{{$passerbys->inputDes}}</th>
-                                <th>{{$passerbys->IngoingOrOutgoing}}</th>
-                                <th>{{$passerbys->created_at}}</th>
-                                <th>{{$passerbys->inputAge}}</th>               
-                            </tr>
-                        </div>
-                        @endforeach
-                    </div> --}}
-
-
-                    <div class="container mt-2 mb-3">
-                        <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <h4 class="text-center mb-5"> Pagination Example in Laravel 6 </h4>
-                                <table class="table table-striped mt-2">
-                                    <thead>
-                                        <th> Date Time</th>
-                                        <th> Border Name</th>
-                                        <th> Full Name</th>
-                                        <th> Direction</th>
-                                        <th> Plate Number</th>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($passerby as $passerbys)
-                                        <tr>
-                                            <td>{{$passerbys->created_at}}</td>
-                                            <td>Border Name (TODO)</td>
-                                            <td>{{$passerbys->inputFName}} {{$passerbys->inputLName}}</td>
-                                            <td>Direction (TODO)</td>
-                                            <td>{{$passerbys->inputPlateNum}} </td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                                {{ $passerby->links() }}
-                            </div>
-                        </div>
+            {{-- Table of Passerby Entries with Pagination --}}
+            <div class="container mt-2 mb-3">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <h4 class="text-center mb-5"> Pagination Example in Laravel 6 </h4>
+                        <table class="table table-striped mt-2">
+                            <thead>
+                                <th> Date Time</th>
+                                <th> Border Name</th>
+                                <th> Full Name</th>
+                                <th> Direction</th>
+                                <th> Plate Number</th>
+                            </thead>
+                            <tbody>
+                                @foreach($passerby as $passerbys)
+                                <tr>
+                                    <td>{{$passerbys->created_at}}</td>
+                                    <td>Border Name (TODO)</td>
+                                    <td>{{$passerbys->inputFName}} {{$passerbys->inputLName}}</td>
+                                    <td>
+                                        @if ($passerbys->IngoingOrOutgoing==0)
+                                        Ingoing
+                                        @else 
+                                        Outgoing
+                                        @endif
+                                    </td>
+                                    </td>
+                                    <td>{{$passerbys->inputPlateNum}} </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        {{ $passerby->links() }}
                     </div>
+                </div>
+            </div>
         </div>
     </section>
 
