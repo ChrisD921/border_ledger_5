@@ -55,7 +55,11 @@ class PersonnelController extends Controller
     }
 
     public function profile(){
-        return view('/borderLedger/profile');
+        //Need to fix this !!!!
+        $personnel =Personnel::findOrFail(1);
+        
+
+        return view('/borderLedger/profile',['personnel' => $personnel] );
     }
 
 }
