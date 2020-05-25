@@ -21,7 +21,7 @@ Route::post('/borderLedger/management' , 'PersonnelController@store' );
 
 Route::get('/borderLedger/management', 'PersonnelController@show');
 
-Route::get('/borderLedger/ledger', 'PasserbyController@show');
+Route::get('/borderLedger/ledger', 'PasserbyController@index');
 Route::post('/borderLedger/ledger', 'PasserbyController@store');
 
 Route::get('/borderLedger/profile', 'PersonnelController@profile');

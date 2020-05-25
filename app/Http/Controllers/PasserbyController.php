@@ -11,10 +11,11 @@ class PasserbyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    public function index() {
+        $passerby = Passerby::paginate(5);
+        return view('/borderLedger/ledger', compact('passerby'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -63,9 +64,9 @@ class PasserbyController extends Controller
     public function show()
     {
 
-        $passerby = Passerby::latest()->get();
+        //$passerby = Passerby::latest()->get();
 
-        return view('/borderLedger/ledger', ['pass' => $passerby]);
+        //return view('/borderLedger/ledger', ['pass' => $passerby]);
     }
 
     /**
