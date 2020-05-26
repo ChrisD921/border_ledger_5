@@ -48,6 +48,7 @@ class PasserbyController extends Controller
         $passerby->inputPlateNum= request('inputPlateNum');
         $passerby->inputPurpose= request('inputPurpose');
         $passerby->inputDes= request('inputDes');
+        // $passerby->inputBorder = request('inputBorder');
         $passerby->IngoingOrOutgoing = request('IngoingOrOutgoing');
         
 
@@ -57,6 +58,7 @@ class PasserbyController extends Controller
 
         return redirect('/borderLedger/ledger')->with('success_msg' , 'New Personnel Account Successfully Created!');
     }
+
 
     /**
      * Display the specified resource.

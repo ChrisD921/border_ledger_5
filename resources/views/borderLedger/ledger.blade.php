@@ -125,20 +125,37 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <div class="row">
-                                                <div class="col-4">
-                                                    <label for="inputDes">Destination</label>
-                                                </div>
-                                                <div class="col-8">
-                                                    <input type="text" class="form-control" id="inputDes" name="inputDes" placeholder="">
-                                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label for="inputDes">Destination</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" class="form-control" id="inputDes" name="inputDes" placeholder="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label for="inputBorder">Border</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <select id="inputBorder" name="inputBorder" class="form-control">
+                                                    <option selected>Select Border...</option>
+                                                    <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
+                                                    <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
+                                                    <option value="3">M.I. Quezon (boun. Cabancalan-Talamban)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                                 <input type="hidden" name="IngoingOrOutgoing" value="0">
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-success">Submit</button>
@@ -266,20 +283,37 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <div class="row">
-                                                <div class="col-4">
-                                                    <label for="inputDes">Destination</label>
-                                                </div>
-                                                <div class="col-8">
-                                                    <input type="text" class="form-control" id="inputDes" name="inputDes" placeholder="">
-                                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label for="inputDes">Destination</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" class="form-control" id="inputDes" name="inputDes" placeholder="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label for="inputBorder">Border</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <select id="inputBorder" name="inputBorder" class="form-control">
+                                                    <!-- <option selected>Select Border...</option> -->
+                                                    <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
+                                                    <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
+                                                    <option value="3">M.I. Quezon (boun. Cabancalan-Talamban)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <input type="hidden" name="IngoingOrOutgoing" value="1">
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-success">Submit</button>
@@ -309,7 +343,8 @@
                                 @foreach($passerby as $passerbys)
                                 <tr>
                                     <td>{{$passerbys->created_at}}</td>
-                                    <td>Border Name (TODO)</td>
+                                    <td>Border</td> 
+                                    <!-- {{$passerbys->inputBorder}} -->
                                     <td>{{$passerbys->inputFName}} {{$passerbys->inputLName}}</td>
                                     <td>
                                         @if ($passerbys->IngoingOrOutgoing==0)
@@ -320,7 +355,37 @@
                                     </td>
                                     </td>
                                     <td>{{$passerbys->inputPlateNum}} </td>
-                                    <td><button type="menu">View (TODO)</button></td>
+                                    <!-- <td><button type="menu">View (TODO)</button></td> -->
+                                    <td>
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetails">
+                                            VIEW
+                                        </button>
+                                    </td>
+
+                                    <div class="modal fade" id="viewDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">{{$passerbys->inputFName}} {{$passerbys->inputLName}}'s Form</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <ul class="list-group list-group-flush">
+                                                        <li class="list-group-item">Age: {{$passerbys->inputAge}}</li>
+                                                        <li class="list-group-item">ID Type: {{$passerbys->inputIdType}}</li>
+                                                        <li class="list-group-item">Id Number: {{$passerbys->inputIdNum}}</li>
+                                                        <li class="list-group-item">Mode of Transport: {{$passerbys->inputTransMode}}</li>
+                                                        <li class="list-group-item">Vehicle Plate Number: {{$passerbys->inputPlateNum}}</li>
+                                                        <li class="list-group-item">Purpose: {{$passerbys->inputPurpose}}</li>
+                                                        <li class="list-group-item">Destination: {{$passerbys->inputDes}}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -332,4 +397,13 @@
         </div>
     </section>
 
+    <!-- <script>
+        $.ready(function(){
+            $('#inputBorder').select2({
+                dropdownParent: $('#goingin')
+            });
+        });
+    </script>     -->
+
 @endsection
+
