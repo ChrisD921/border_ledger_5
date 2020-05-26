@@ -5,10 +5,10 @@
 <section class="jumbotron text-center">
     <div class="jumbotron">
       <h1 class="jumbotron-heading">Border Ledger</h1>
-        
+      <p class="msg"> {{ session('success_msg') }}</p>
       {{-- Form to create more Personnel Accounts --}}
         <div class="flex-center position-ref full-height">
-            <p class="msg"> {{ session('success_msg') }}</p>
+            
             <div class="registration">
                 <h1>Create a New Personnel Account</h1>
                 <form action="/borderLedger/management" method="POST">
@@ -50,6 +50,13 @@
                                             <td>{{$personnels->date_of_birth}}</td>                        
                                             <td>{{$personnels->password}} </td>
                                             <td><button type="menu">View (TODO)</button></td>
+                                            <td>
+                                                <form action="/borderLedger/management/{{$personnels->id }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button>Delete Account</button>
+                                                </form>
+                                            </td>
                                         </tr>
                                         @endforeach
                                     </tbody>

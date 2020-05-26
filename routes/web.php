@@ -21,7 +21,7 @@ Route::get('/borderLedger/management', 'PersonnelController@index');
 
 Route::post('/borderLedger/management' , 'PersonnelController@store' );
 
-
+Route::delete('/borderLedger/management/{id}', 'PersonnelController@destroy');
 
 Route::get('/borderLedger/ledger', 'PasserbyController@index');
 Route::post('/borderLedger/ledger', 'PasserbyController@store');

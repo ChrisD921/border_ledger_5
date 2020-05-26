@@ -62,4 +62,12 @@ class PersonnelController extends Controller
         return view('/borderLedger/profile',['personnel' => $personnel] );
     }
 
+    public function destroy($id){
+        $personnel = Personnel::findOrFail($id);
+        $personnel->delete();
+
+        return redirect('/borderLedger/management');
+
+    }
+
 }

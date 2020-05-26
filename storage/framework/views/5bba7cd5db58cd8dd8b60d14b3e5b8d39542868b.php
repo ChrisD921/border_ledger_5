@@ -5,10 +5,10 @@
 <section class="jumbotron text-center">
     <div class="jumbotron">
       <h1 class="jumbotron-heading">Border Ledger</h1>
-        
+      <p class="msg"> <?php echo e(session('success_msg')); ?></p>
       
         <div class="flex-center position-ref full-height">
-            <p class="msg"> <?php echo e(session('success_msg')); ?></p>
+            
             <div class="registration">
                 <h1>Create a New Personnel Account</h1>
                 <form action="/borderLedger/management" method="POST">
@@ -50,6 +50,13 @@
                                             <td><?php echo e($personnels->date_of_birth); ?></td>                        
                                             <td><?php echo e($personnels->password); ?> </td>
                                             <td><button type="menu">View (TODO)</button></td>
+                                            <td>
+                                                <form action="/borderLedger/management/<?php echo e($personnels->id); ?>" method="POST">
+                                                    <?php echo csrf_field(); ?>
+                                                    <?php echo method_field('DELETE'); ?>
+                                                    <button>Delete Account</button>
+                                                </form>
+                                            </td>
                                         </tr>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </tbody>
