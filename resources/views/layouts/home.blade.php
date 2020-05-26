@@ -15,7 +15,10 @@
         <!-- Styles -->
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/app.css">
-    
+        
+        <!-- Select2 -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
     </head>
     <body>
 
@@ -38,7 +41,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
                                 <a class="dropdown-item" href="/borderLedger/profile">Profile</a>
-                                <a class="dropdown-item" href="/">Logout</a>
+                                <a class="dropdown-item" href="/borderLedger/index">Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -55,6 +58,10 @@
         </footer>
 
         <script type="text/javascript" src="/js/app.js"></script>
+        <!-- <script src="{{Config::get('app.url')}}/node/node_modules/select2.dist/js/select2.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudfare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+        
     </body>
 
 </html>
