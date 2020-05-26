@@ -17,8 +17,7 @@
         </div>
         <a href="/borderLedger/management">Add a Personnel Account</a><br>
         <a href="/borderLedger/ledger">Add a Passerby Entry</a><br>
-        <button class="loginButton" href='/borderLedger/login'> Login </button>
-
+        <a class="btn btn-secondary my-2" href="/borderLedger/login"> Login </a>
 
     </div>
 </div>
