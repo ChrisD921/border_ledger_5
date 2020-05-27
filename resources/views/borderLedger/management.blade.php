@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -9,25 +9,46 @@
       {{-- Form to create more Personnel Accounts --}}
         <div class="flex-center position-ref full-height">
             
-            <div class="registration">
-                <h1>Create a New Personnel Account</h1>
-                <form action="/borderLedger/management" method="POST">
-                @csrf
-                <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" name="first_name"><br>
-
-                <label for="last_name">Last Name:</label>
-                <input type="text" id="last_name" name="last_name"><br>
-
-                <label for="date_of_birth">Date of Birth:</label>
-                <input type="date" id="date_of_birth" name="date_of_birth"><br>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password"><br>
-                
-                
-                <button type="submit" value="Add User">Submit</button>
-                </form>    
+        <div class="registration">
+            <h2 class="card-title text-center">Create a New Personnel Account</h2>
+            <div class="row">
+                <form class="card-body" action="/borderLedger/management" method="POST">
+                    @csrf
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label for="first_name">First Name:</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="first_name" name="first_name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label for="last_name">Last Name:</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="last_name" name="last_name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label for="date_of_birth">Date of Birth:</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="date" class="form-control" id="date_of_birth" name="date_of_birth">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">
+                            <label for="password">Password:</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="password" class="form-control" id="password" name="password">
+                        </div>
+                    </div>
+                        <button type="submit" class="btn btn-success" value="Add User">Submit</button>
+                    </form>
+                </div> 
             </div> 
 
             {{-- Personnel Account Display Table --}}
