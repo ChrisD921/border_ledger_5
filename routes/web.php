@@ -41,3 +41,7 @@ Route::get('/borderLedger/profile', 'PersonnelController@profile');
 //     return view('ledger');
 // });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
