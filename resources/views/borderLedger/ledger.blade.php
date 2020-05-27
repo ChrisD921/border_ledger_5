@@ -304,7 +304,7 @@
                                             </div>
                                             <div class="col-8">
                                                 <select id="inputBorder" name="inputBorder" class="form-control">
-                                                    <option selected>Select Border...</option>
+                                                    <!-- <option selected>Select Border...</option> -->
                                                     <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
                                                     <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
                                                     <option value="3">M.I. Quezon (boun. Cabancalan-Talamban)</option>
@@ -344,6 +344,7 @@
                                 <tr>
                                     <td>{{$passerbys->created_at}}</td>
                                     <td>Border</td> 
+                                    <!-- {{$passerbys->inputBorder}} -->
                                     <td>{{$passerbys->inputFName}} {{$passerbys->inputLName}}</td>
                                     <td>
                                         @if ($passerbys->IngoingOrOutgoing==0)
@@ -354,8 +355,9 @@
                                     </td>
                                     </td>
                                     <td>{{$passerbys->inputPlateNum}} </td>
+                                    <!-- <td><button type="menu">View (TODO)</button></td> -->
                                     <td>
-                                        <button id="viewBtn" type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetails">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetails">
                                             VIEW
                                         </button>
                                     </td>
@@ -378,7 +380,6 @@
                                                         <li class="list-group-item">Vehicle Plate Number: {{$passerbys->inputPlateNum}}</li>
                                                         <li class="list-group-item">Purpose: {{$passerbys->inputPurpose}}</li>
                                                         <li class="list-group-item">Destination: {{$passerbys->inputDes}}</li>
-                                                        <li class="list-group-item">Border: </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -395,6 +396,14 @@
             </div>
         </div>
     </section>
+
+    <!-- <script>
+        $.ready(function(){
+            $('#inputBorder').select2({
+                dropdownParent: $('#goingin')
+            });
+        });
+    </script>     -->
 
 @endsection
 

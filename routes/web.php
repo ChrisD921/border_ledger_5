@@ -28,8 +28,6 @@ Route::post('/borderLedger/ledger', 'PasserbyController@store');
 
 Route::get('/borderLedger/profile', 'PersonnelController@profile');
 
-
-
 //dd(request()->all());
 // Route::get('/admin', function () {
 //     return view('management');
@@ -43,7 +41,3 @@ Route::get('/borderLedger/profile', 'PersonnelController@profile');
 //     return view('ledger');
 // });
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

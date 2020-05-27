@@ -23,7 +23,6 @@ class CreatePasserbysTable extends Migration
             $table->string('inputPlateNum');
             $table->string('inputPurpose');
             $table->string('inputDes');
-            $table->string('inputBorder');
             $table->integer('IngoingOrOutgoing');
             $table->rememberToken();
 
