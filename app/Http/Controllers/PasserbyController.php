@@ -48,7 +48,7 @@ class PasserbyController extends Controller
         $passerby->inputPlateNum= request('inputPlateNum');
         $passerby->inputPurpose= request('inputPurpose');
         $passerby->inputDes= request('inputDes');
-        // $passerby->inputBorder = request('inputBorder');
+        $passerby->inputBorder = request('inputBorder');
         $passerby->IngoingOrOutgoing = request('IngoingOrOutgoing');
         
 
@@ -57,6 +57,30 @@ class PasserbyController extends Controller
 
 
         return redirect('/borderLedger/ledger')->with('success_msg' , 'New Personnel Account Successfully Created!');
+    }
+
+    public function dataAjax(Request $request)
+    {
+    	$data = [
+            // {id: '1', text: 'A.S. Fortuna St. (boun. Banilad)'},
+            // {id: '2', text: 'Panagdait (boun. H. Cortes/Bridge)'},
+            // {id: '3', text: 'M.I. Quezon (boun. Cabancalan-Talamban)'}
+        ];
+        // $data = array(
+        //     'inputBorder' => ['A.S. Fortuna St. (boun. Banilad)', 'Panagdait (boun. H. Cortes/Bridge)', 'M.I. Quezon (boun. Cabancalan-Talamban)']
+        // )
+
+
+        if($request->has('q')){
+            $search = $request->q;
+            $data = Passerby::table("passerbys")
+            		->select("id","inputBorder")
+            		->where('inputBorder','LIKE',"%$search%")
+            		->get();
+        }
+
+
+        return response()->json($data);
     }
 
 

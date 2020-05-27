@@ -26,6 +26,8 @@ class CreatePasserbysTable extends Migration
             $table->integer('IngoingOrOutgoing');
             $table->rememberToken();
 
+            $table->string('inputBorder');
+
             $table->timestamps();
         });
     }

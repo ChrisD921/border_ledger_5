@@ -145,7 +145,7 @@
                                                 <label for="inputBorder">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="inputBorder" name="inputBorder" class="form-control">
+                                                <select id="inputBorder" name="inputBorder" class="form-control" style="width: 100%">
                                                     <option selected>Select Border...</option>
                                                     <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
                                                     <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
@@ -303,8 +303,8 @@
                                                 <label for="inputBorder">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="inputBorder" name="inputBorder" class="form-control">
-                                                    <!-- <option selected>Select Border...</option> -->
+                                                <select id="inputBorder" name="inputBorder" class="form-control" style="width: 100%">
+                                                    <option selected>Select Border...</option>
                                                     <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
                                                     <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
                                                     <option value="3">M.I. Quezon (boun. Cabancalan-Talamban)</option>
@@ -344,7 +344,6 @@
                                 <tr>
                                     <td>{{$passerbys->created_at}}</td>
                                     <td>Border</td> 
-                                    <!-- {{$passerbys->inputBorder}} -->
                                     <td>{{$passerbys->inputFName}} {{$passerbys->inputLName}}</td>
                                     <td>
                                         @if ($passerbys->IngoingOrOutgoing==0)
@@ -355,7 +354,6 @@
                                     </td>
                                     </td>
                                     <td>{{$passerbys->inputPlateNum}} </td>
-                                    <!-- <td><button type="menu">View (TODO)</button></td> -->
                                     <td>
                                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetails">
                                             VIEW
@@ -397,13 +395,30 @@
         </div>
     </section>
 
-    <!-- <script>
-        $.ready(function(){
-            $('#inputBorder').select2({
-                dropdownParent: $('#goingin')
-            });
+    <script type="text/javascript">
+    // $.ready(function(){
+        $('#inputBorder').select2({
+            // dropdownParent: $('#goingin')
+            // placeholder: 'Select',
+            ajax: {
+            url: '/borderLedger/ledger-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function (data) {
+                return {
+                results:  $.map(data, function (item) {
+                        return {
+                            text: item.inputBorder,
+                            id: item.id
+                        }
+                    })
+                };
+            },
+            cache: true
+            }
         });
-    </script>     -->
+    // });
+    </script>
 
 @endsection
 
