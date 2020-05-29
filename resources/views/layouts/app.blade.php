@@ -18,6 +18,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+
+    <!-- Select2 -->
+    <script src="{{Config::get('app.url')}}/node/node_modules/select2.dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudfare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
 </head>
 <body>
     <div id="app">
@@ -33,7 +40,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ledger">Ledger</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/management">Management</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -55,8 +67,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/home">
+                                    <!-- <a class="dropdown-item" href="/home">
                                         Home
+                                    </a> -->
+                                    <a class="dropdown-item" href="/profile">
+                                        Profile
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -79,5 +94,10 @@
             @yield('content')
         </main>
     </div>
+
+    <footer>
+        Copyright 2020 BorderLedger5
+    </footer>
+
 </body>
 </html>

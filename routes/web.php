@@ -17,16 +17,18 @@ Route::get('/', 'PersonnelController@indexhome');
 
 //Route::get('/borderLedger/login', 'PersonnelController@login');
 
-Route::get('/borderLedger/management', 'PersonnelController@index');
+Route::get('/management', 'PersonnelController@index');
 
-Route::post('/borderLedger/management' , 'PersonnelController@store' );
+Route::post('/management' , 'PersonnelController@store' );
 
-Route::delete('/borderLedger/management/{id}', 'PersonnelController@destroy');
+Route::delete('/management/{id}', 'PersonnelController@destroy');
 
-Route::get('/borderLedger/ledger', 'PasserbyController@index');
-Route::post('/borderLedger/ledger', 'PasserbyController@store');
+Route::get('/ledger', 'PasserbyController@index');
+Route::post('/ledger', 'PasserbyController@store');
+//ajax:
+Route::get('/ledger-ajax', 'PasserbyController@dataAjax');
 
-Route::get('/borderLedger/profile', 'PersonnelController@profile');
+Route::get('/profile', 'PersonnelController@profile');
 
 //dd(request()->all());
 // Route::get('/admin', function () {

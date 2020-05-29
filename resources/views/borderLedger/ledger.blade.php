@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('layouts.app')
 
 @section('content')
 
@@ -142,10 +142,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_border">Border</label>
+                                                <label for="pass_border_in">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_border" name="pass_border" class="form-control">
+                                                <select id="pass_border_in" name="pass_border_in" class="form-control">
                                                     <option selected>Select Border...</option>
                                                     <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
                                                     <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
@@ -300,11 +300,11 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_border">Border</label>
+                                                <label for="pass_border_out">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_border" name="pass_border" class="form-control">
-                                                    <!-- <option selected>Select Border...</option> -->
+                                                <select id="pass_border_out" name="pass_border_out" class="form-control">
+                                                    <option selected>Select Border...</option>
                                                     <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
                                                     <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
                                                     <option value="3">M.I. Quezon (boun. Cabancalan-Talamban)</option>
@@ -344,7 +344,6 @@
                                 <tr>
                                     <td>{{$passerbys->created_at}}</td>
                                     <td>Border</td> 
-                                    <!-- {{$passerbys->pass_border}} -->
                                     <td>{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}</td>
                                     <td>
                                         @if ($passerbys->pass_ingoing_or_outgoing==0)
@@ -397,13 +396,45 @@
         </div>
     </section>
 
-    <!-- <script>
-        $.ready(function(){
-            $('#inputBorder').select2({
-                dropdownParent: $('#goingin')
-            });
+    <script type="text/javascript">
+        $('#pass_border_in').select2({
+            ajax: {
+            url: '/ledger-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function (data) {
+                return {
+                results:  $.map(data, function (item) {
+                        return {
+                            text: item.inputBorder,
+                            id: item.id
+                        }
+                    })
+                };
+            },
+            cache: true
+            }
         });
-    </script>     -->
+
+        $('#pass_border_out').select2({
+            ajax: {
+            url: '/ledger-ajax',
+            dataType: 'json',
+            delay: 250,
+            processResults: function (data) {
+                return {
+                results:  $.map(data, function (item) {
+                        return {
+                            text: item.inputBorder,
+                            id: item.id
+                        }
+                    })
+                };
+            },
+            cache: true
+            }
+        });
+    </script>
 
 @endsection
 

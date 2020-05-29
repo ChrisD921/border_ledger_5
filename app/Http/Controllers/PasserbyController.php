@@ -57,9 +57,23 @@ class PasserbyController extends Controller
         
 
 
-        return redirect('/borderLedger/ledger')->with('success_msg' , 'New Personnel Account Successfully Created!');
+        return redirect('/ledger')->with('success_msg' , 'New Personnel Account Successfully Created!');
     }
 
+    public function dataAjax(Request $request)
+    {
+        $data = [];
+        
+        if($request->has('q')){
+            $search = $request->q;
+            $data = Passerby::table("passerbys")
+            		->select("id","pass_border_in")
+            		->where('pass_border_in','LIKE',"%$search%")
+            		->get();
+        }
+
+        return response()->json($data);
+    }
 
     /**
      * Display the specified resource.
