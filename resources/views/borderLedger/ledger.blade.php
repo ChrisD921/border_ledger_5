@@ -355,6 +355,7 @@
                                     </td>
                                     </td>
                                     <td>{{$passerbys->inputPlateNum}} </td>
+                                    <!-- <td><button type="menu">View (TODO)</button></td> -->
                                     <td>
                                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetails">
                                             VIEW
@@ -396,30 +397,13 @@
         </div>
     </section>
 
-    <script type="text/javascript">
-    // $.ready(function(){
-        $('#inputBorder').select2({
-            // dropdownParent: $('#goingin')
-            // placeholder: 'Select',
-            ajax: {
-            url: '/borderLedger/ledger-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function (data) {
-                return {
-                results:  $.map(data, function (item) {
-                        return {
-                            text: item.inputBorder,
-                            id: item.id
-                        }
-                    })
-                };
-            },
-            cache: true
-            }
+    <!-- <script>
+        $.ready(function(){
+            $('#inputBorder').select2({
+                dropdownParent: $('#goingin')
+            });
         });
-    // });
-    </script>
+    </script>     -->
 
 @endsection
 
