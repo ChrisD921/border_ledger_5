@@ -28,6 +28,12 @@ Route::post('/borderLedger/ledger', 'PasserbyController@store');
 
 Route::get('/borderLedger/profile', 'PersonnelController@profile');
 
+//ledger:
+// Route::get('select2-autocomplete', 'Select2AutocompleteController@layout');
+//ajax:
+Route::get('/borderLedger/ledger-ajax', 'PasserbyController@dataAjax');
+
+
 //dd(request()->all());
 // Route::get('/admin', function () {
 //     return view('management');
