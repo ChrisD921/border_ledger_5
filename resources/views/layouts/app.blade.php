@@ -95,7 +95,7 @@
         </main>
     </div>
 
-    <footer>
+    <footer class="fixed-bottom">
         Copyright 2020 BorderLedger5
     </footer>
 
