@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 
@@ -30,6 +30,8 @@
         <a href="/borderLedger/management">Add a Personnel Account</a><br>
         <a href="/borderLedger/ledger">Add a Passerby Entry</a><br>
         <a class="btn btn-secondary my-2" href="/borderLedger/login"> Login </a>
+        <a class="btn btn-secondary my-2" href="/auth/register"> Register </a>
+        
 
     </div>
 </div>

@@ -19,11 +19,18 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->date('date_of_birth');
 
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->integer('admin')->default(0);
+            $table->integer('is_admin')->default(0);
         });
+
+        Artisan::call('db:seed', [
+            '--class' => UserTableSeeder::class
+        ]);
     }
 
     /**

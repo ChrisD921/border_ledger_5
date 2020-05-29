@@ -40,16 +40,17 @@ class PasserbyController extends Controller
     {
         $passerby = new Passerby();
 
-        $passerby->inputFName= request('inputFName');
-        $passerby->inputLName= request('inputLName');
-        $passerby->inputAge= request('inputAge');
-        $passerby->inputIdType= request('inputIdType');
-        $passerby->inputTransMode= request('inputTransMode');
-        $passerby->inputPlateNum= request('inputPlateNum');
-        $passerby->inputPurpose= request('inputPurpose');
-        $passerby->inputDes= request('inputDes');
+        $passerby->pass_first_name= request('pass_first_name');
+        $passerby->pass_last_name= request('pass_last_name');
+        $passerby->pass_age= request('pass_age');
+        $passerby->pass_id_type= request('pass_id_type');
+        $passerby->pass_id_num= request('pass_id_num');
+        $passerby->pass_trans_mode= request('pass_trans_mmode');
+        $passerby->pass_plate_num= request('pass_plate_num');
+        $passerby->pass_purpose= request('pass_purpose');
+        $passerby->pass_des= request('pass_des');
         // $passerby->inputBorder = request('inputBorder');
-        $passerby->IngoingOrOutgoing = request('IngoingOrOutgoing');
+        $passerby->pass_ingoing_or_outgoing = request('pass_ingoing_or_outgoing');
         
 
         $passerby->save();

@@ -6,6 +6,8 @@
     <div class="jumbotron">
       <h1 class="jumbotron-heading">Border Ledger</h1>
       <p class="msg"> <?php echo e(session('success_msg')); ?></p>
+
+
       
         <div class="flex-center position-ref full-height">
             
@@ -21,6 +23,9 @@
 
                 <label for="date_of_birth">Date of Birth:</label>
                 <input type="date" id="date_of_birth" name="date_of_birth"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password"><br>
@@ -41,13 +46,15 @@
                                     <thead>
                                         <th> Full Name</th>
                                         <th> Date of Birth</th>
+                                        <th> Email</th>
                                         <th> Password</th>
                                     </thead>
                                     <tbody>
                                         <?php $__currentLoopData = $personnel; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $personnels): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr>
                                             <td><?php echo e($personnels->first_name); ?> <?php echo e($personnels->last_name); ?></td>
-                                            <td><?php echo e($personnels->date_of_birth); ?></td>                        
+                                            <td><?php echo e($personnels->date_of_birth); ?></td>      
+                                            <td><?php echo e($personnels->email); ?></td>                  
                                             <td><?php echo e($personnels->password); ?> </td>
                                             <td><button type="menu">View (TODO)</button></td>
                                             <td>
@@ -77,4 +84,4 @@
 </section>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Christopher\Documents\GitHub\border_ledger_5\resources\views//borderLedger/management.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Christopher\Documents\GitHub\border_ledger_5\resources\views//borderLedger/management.blade.php ENDPATH**/ ?>

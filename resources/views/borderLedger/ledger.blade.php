@@ -29,33 +29,20 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputFName">First Name</label>
+                                                <label for="pass_first_name">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputFName" name="inputFName" placeholder="">
+                                                <input type="text" class="form-control" id="pass_first_name" name="pass_first_name" placeholder="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputLName">Last Name</label>
+                                                <label for="pass_last_name">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputLName" name="inputLName" placeholder="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label for="inputAge">Age</label>
-                                            </div>
-                                            <div class="col-8">
-                                                <input type="text" class="form-control" id="inputAge" name="inputAge" placeholder="">
+                                                <input type="text" class="form-control" id="pass_last_name" name="pass_last_name" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -65,20 +52,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputIdType">ID Type</label>
+                                                <label for="pass_age">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputIdType"  name="inputIdType" placeholder="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label for="inputIdNum">ID Number</label>
-                                            </div>
-                                            <div class="col-8">
-                                                <input type="text" class="form-control" id="inputIdNum" name="inputIdNum" placeholder="">
+                                                <input type="text" class="form-control" id="pass_age" name="pass_age" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -88,10 +65,33 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputTransMode">Mode of Transport</label>
+                                                <label for="pass_id_type">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="inputTransMode" name="inputTransMode" class="form-control">
+                                                <input type="text" class="form-control" id="pass_id_type"  name="pass_id_type" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label for="pass_id_num">ID Number</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" class="form-control" id="pass_id_num" name="pass_id_num" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label for="pass_trans_mode">Mode of Transport</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <select id="pass_trans_mode" name="pass_trans_mode" class="form-control">
                                                     <option selected>Choose...</option>
                                                     <option value="1">Walking</option>
                                                     <option value="2">Delivery Vehicle</option>
@@ -105,10 +105,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputPlateNum">Vehicle Plate Number</label>
+                                                <label for="pass_plate_num">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputPlateNum" name="inputPlateNum" placeholder="">
+                                                <input type="text" class="form-control" id="pass_plate_num" name="pass_plate_num" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -117,10 +117,10 @@
                                 <div class="form-group">
                                     <div class="form-row">
                                         <div class="col-2">
-                                            <label for="inputPurpose">Purpose</label>
+                                            <label for="pass_purpose">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                        <textarea class="form-control" id="inputPurpose" name="inputPurpose" rows="3"></textarea>
+                                        <textarea class="form-control" id="pass_purpose" name="pass_purpose" rows="3"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -129,10 +129,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputDes">Destination</label>
+                                                <label for="pass_des">Destination</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputDes" name="inputDes" placeholder="">
+                                                <input type="text" class="form-control" id="pass_des" name="pass_des" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -142,10 +142,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputBorder">Border</label>
+                                                <label for="pass_border">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="inputBorder" name="inputBorder" class="form-control">
+                                                <select id="pass_border" name="pass_border" class="form-control">
                                                     <option selected>Select Border...</option>
                                                     <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
                                                     <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                                 
-                                <input type="hidden" name="IngoingOrOutgoing" value="0">
+                                <input type="hidden" name="pass_ingoing_or_outgoing" value="0">
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-success">Submit</button>
                                 </div>
@@ -187,33 +187,20 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputFName">First Name</label>
+                                                <label for="pass_first_name">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputFName" name="inputFName" placeholder="">
+                                                <input type="text" class="form-control" id="pass_first_name" name="pass_first_name" placeholder="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputLName">Last Name</label>
+                                                <label for="pass_last_name">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputLName" name="inputLName" placeholder="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label for="inputAge">Age</label>
-                                            </div>
-                                            <div class="col-8">
-                                                <input type="text" class="form-control" id="inputAge" name="inputAge" placeholder="">
+                                                <input type="text" class="form-control" id="pass_last_name" name="pass_last_name" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -223,20 +210,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputIdType">ID Type</label>
+                                                <label for="pass_age">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputIdType" name="inputIdType" placeholder="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label for="inputIdNum">ID Number</label>
-                                            </div>
-                                            <div class="col-8">
-                                                <input type="text" class="form-control" id="inputIdNum" name="inputIdNum" placeholder="">
+                                                <input type="text" class="form-control" id="pass_age" name="pass_age" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -246,10 +223,33 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputTransMode">Mode of Transport</label>
+                                                <label for="pass_id_type">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="inputTransMode" name="inputTransMode" class="form-control">
+                                                <input type="text" class="form-control" id="pass_id_type" name="pass_id_type" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label for="pass_id_num">ID Number</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" class="form-control" id="pass_id_num" name="pass_id_num" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label for="pass_trans_mode">Mode of Transport</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <select id="pass_trans_mode" name="pass_trans_mode" class="form-control">
                                                     <option selected>Choose...</option>
                                                     <option value="1">Walking</option>
                                                     <option value="2">Delivery Vehicle</option>
@@ -263,10 +263,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputPlateNum">Vehicle Plate Number</label>
+                                                <label for="pass_plate_num">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputPlateNum" name="inputPlateNum" placeholder="">
+                                                <input type="text" class="form-control" id="pass_plate_num" name="pass_plate_num" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -275,10 +275,10 @@
                                 <div class="form-group">
                                     <div class="form-row">
                                         <div class="col-2">
-                                            <label for="inputPurpose">Purpose</label>
+                                            <label for="pass_purpose">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                        <textarea class="form-control" id="inputPurpose" name="inputPurpose" rows="3"></textarea>
+                                        <textarea class="form-control" id="pass_purpose" name="pass_purpose" rows="3"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -287,10 +287,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputDes">Destination</label>
+                                                <label for="pass_des">Destination</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="inputDes" name="inputDes" placeholder="">
+                                                <input type="text" class="form-control" id="pass_des" name="pass_des" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -300,10 +300,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="inputBorder">Border</label>
+                                                <label for="pass_border">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="inputBorder" name="inputBorder" class="form-control">
+                                                <select id="pass_border" name="pass_border" class="form-control">
                                                     <!-- <option selected>Select Border...</option> -->
                                                     <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
                                                     <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
@@ -314,7 +314,7 @@
                                     </div>
                                 </div>
 
-                                <input type="hidden" name="IngoingOrOutgoing" value="1">
+                                <input type="hidden" name="pass_ingoing_or_outgoing" value="1">
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-success">Submit</button>
                                 </div>
@@ -344,10 +344,10 @@
                                 <tr>
                                     <td>{{$passerbys->created_at}}</td>
                                     <td>Border</td> 
-                                    <!-- {{$passerbys->inputBorder}} -->
-                                    <td>{{$passerbys->inputFName}} {{$passerbys->inputLName}}</td>
+                                    <!-- {{$passerbys->pass_border}} -->
+                                    <td>{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}</td>
                                     <td>
-                                        @if ($passerbys->IngoingOrOutgoing==0)
+                                        @if ($passerbys->pass_ingoing_or_outgoing==0)
                                         Ingoing
                                         @else 
                                         Outgoing
@@ -373,13 +373,13 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item">Age: {{$passerbys->inputAge}}</li>
-                                                        <li class="list-group-item">ID Type: {{$passerbys->inputIdType}}</li>
-                                                        <li class="list-group-item">Id Number: {{$passerbys->inputIdNum}}</li>
-                                                        <li class="list-group-item">Mode of Transport: {{$passerbys->inputTransMode}}</li>
-                                                        <li class="list-group-item">Vehicle Plate Number: {{$passerbys->inputPlateNum}}</li>
-                                                        <li class="list-group-item">Purpose: {{$passerbys->inputPurpose}}</li>
-                                                        <li class="list-group-item">Destination: {{$passerbys->inputDes}}</li>
+                                                        <li class="list-group-item">Age: {{$passerbys->pass_age}}</li>
+                                                        <li class="list-group-item">ID Type: {{$passerbys->pass_id_type}}</li>
+                                                        <li class="list-group-item">Id Number: {{$passerbys->pass_id_num}}</li>
+                                                        <li class="list-group-item">Mode of Transport: {{$passerbys->pass_trans_mode}}</li>
+                                                        <li class="list-group-item">Vehicle Plate Number: {{$passerbys->pass_plate_num}}</li>
+                                                        <li class="list-group-item">Purpose: {{$passerbys->pass_purpose}}</li>
+                                                        <li class="list-group-item">Destination: {{$passerbys->pass_des}}</li>
                                                     </ul>
                                                 </div>
                                             </div>

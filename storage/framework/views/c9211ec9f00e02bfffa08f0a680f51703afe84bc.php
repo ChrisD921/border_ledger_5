@@ -15,7 +15,7 @@
                 <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
                 <div class="form-group">
                     <label for="inputEmail" class="sr-only">Username</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
                 </div>
                 <div class="form-group">
                     <label for="inputPassword" class="sr-only">Password</label>

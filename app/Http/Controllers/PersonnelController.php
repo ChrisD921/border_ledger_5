@@ -6,9 +6,14 @@ use Illuminate\Http\Request;
 use App\Personnel;
 class PersonnelController extends Controller
 {
+
+    // public function __construct(){
+    //     $this->middleware('auth');
+    // }
+
     public function indexhome(){
 
-        return view('/borderledger/index');
+        return view('/index');
     }
 
 
@@ -45,6 +50,7 @@ class PersonnelController extends Controller
         $personnel->first_name = request('first_name');
         $personnel->last_name = request('last_name');
         $personnel->date_of_birth = request('date_of_birth');
+        $personnel->email = request('email');
         $personnel->password = request('password');
 
         $personnel->save();
@@ -55,8 +61,9 @@ class PersonnelController extends Controller
     }
 
     public function profile(){
-        //Need to fix this !!!!
-        $personnel =Personnel::findOrFail(1);
+        
+        //Finds the id of the current Personnel/User and then grabs that row and places it in the array of data below to display in the Profile.
+        $personnel =Personnel::findOrFail(auth()->user()->id);
         
 
         return view('/borderLedger/profile',['personnel' => $personnel] );

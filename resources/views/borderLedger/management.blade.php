@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 
 @section('content')
 
@@ -6,6 +6,8 @@
     <div class="jumbotron">
       <h1 class="jumbotron-heading">Border Ledger</h1>
       <p class="msg"> {{ session('success_msg') }}</p>
+
+
       {{-- Form to create more Personnel Accounts --}}
         <div class="flex-center position-ref full-height">
             
@@ -21,6 +23,9 @@
 
                 <label for="date_of_birth">Date of Birth:</label>
                 <input type="date" id="date_of_birth" name="date_of_birth"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password"><br>
@@ -41,13 +46,15 @@
                                     <thead>
                                         <th> Full Name</th>
                                         <th> Date of Birth</th>
+                                        <th> Email</th>
                                         <th> Password</th>
                                     </thead>
                                     <tbody>
                                         @foreach($personnel as $personnels)
                                         <tr>
                                             <td>{{$personnels->first_name}} {{$personnels->last_name}}</td>
-                                            <td>{{$personnels->date_of_birth}}</td>                        
+                                            <td>{{$personnels->date_of_birth}}</td>      
+                                            <td>{{$personnels->email}}</td>                  
                                             <td>{{$personnels->password}} </td>
                                             <td><button type="menu">View (TODO)</button></td>
                                             <td>

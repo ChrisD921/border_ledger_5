@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/borderLedger/index', 'PersonnelController@indexhome');
+Route::get('/', 'PersonnelController@indexhome');
 
-Route::get('/borderLedger/login', 'PersonnelController@login');
+//Route::get('/borderLedger/login', 'PersonnelController@login');
 
 Route::get('/borderLedger/management', 'PersonnelController@index');
 
@@ -41,3 +41,7 @@ Route::get('/borderLedger/profile', 'PersonnelController@profile');
 //     return view('ledger');
 // });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('index');

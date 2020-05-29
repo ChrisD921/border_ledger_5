@@ -18,9 +18,11 @@
         <a href="/borderLedger/management">Add a Personnel Account</a><br>
         <a href="/borderLedger/ledger">Add a Passerby Entry</a><br>
         <a class="btn btn-secondary my-2" href="/borderLedger/login"> Login </a>
+        <a class="btn btn-secondary my-2" href="/auth/register"> Register </a>
+        
 
     </div>
 </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Christopher\Documents\GitHub\border_ledger_5\resources\views//borderledger/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Christopher\Documents\GitHub\border_ledger_5\resources\views//borderledger/index.blade.php ENDPATH**/ ?>

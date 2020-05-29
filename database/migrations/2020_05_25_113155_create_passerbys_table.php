@@ -15,19 +15,24 @@ class CreatePasserbysTable extends Migration
     {
         Schema::create('passerbys', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('inputFName');
-            $table->string('inputLName');
-            $table->integer('inputAge');
-            $table->string('inputIdType');
-            $table->integer('inputTransMode');
-            $table->string('inputPlateNum');
-            $table->string('inputPurpose');
-            $table->string('inputDes');
-            $table->integer('IngoingOrOutgoing');
+            $table->string('pass_first_name');
+            $table->string('pass_last_name');
+            $table->integer('pass_age');
+            $table->string('pass_id_type');
+            $table->string('pass_id_num');
+            $table->integer('pass_trans_mode');
+            $table->string('pass_plate_num');
+            $table->string('pass_purpose');
+            $table->string('pass_des');
+            $table->integer('pass_ingoing_or_outgoing');
             $table->rememberToken();
 
             $table->timestamps();
         });
+
+        Artisan::call('db:seed', [
+            '--class' => PasserbyTableSeeder::class
+        ]);
     }
 
     /**
