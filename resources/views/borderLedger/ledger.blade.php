@@ -145,8 +145,8 @@
                                                 <label for="pass_border_in">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_border_in" name="pass_border_in" class="form-control">
-                                                    <option selected>Select Border...</option>
+                                                <select id="pass_border_in" name="pass_border_in" class="form-control" style="width:100%">
+                                                    <option value="">Select Border...</option>
                                                     <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
                                                     <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
                                                     <option value="3">M.I. Quezon (boun. Cabancalan-Talamban)</option>
@@ -303,7 +303,7 @@
                                                 <label for="pass_border_out">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_border_out" name="pass_border_out" class="form-control">
+                                                <select id="pass_border_out" name="pass_border_out" class="form-control" style="width:100%">
                                                     <option selected>Select Border...</option>
                                                     <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
                                                     <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
@@ -395,55 +395,8 @@
     </section>
 
     <script type="text/javascript">
-    // $( document ).ready(function() {
-        $('#pass_border_in').select2({
-            ajax: {
-            url: '/ledger-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function (data) {
-                return {
-                results:  $.map(data, function (item) {
-                        return {
-                            text: item.inputBorder,
-                            id: item.id
-                        }
-                    })
-                };
-            },
-            cache: true
-            }
-        });
-
-        $('#pass_border_out').select2({
-            ajax: {
-            url: '/ledger-ajax',
-            dataType: 'json',
-            delay: 250,
-            processResults: function (data) {
-                return {
-                results:  $.map(data, function (item) {
-                        return {
-                            text: item.inputBorder,
-                            id: item.id
-                        }
-                    })
-                };
-            },
-            cache: true
-            }
-        });
-
-        $('#viewBtn').click('show.bs.modal', function (event) {
-            console.log("1");
-            var button = $(event.relatedTarget)
-            var recipient = button.data('whatever') 
-            var modal = $(this)
-            modal.find('.modal-title').text('New message to ' + recipient)
-            // modal.find('.modal-body input').val(recipient)
-            console.log("2");
-        })
-    // });
+        $('#pass_border_in').select2({});
+        $('#pass_border_out').select2({});
     </script>
 
 @endsection
