@@ -49,16 +49,13 @@ html, body {
     margin-bottom: 30px;
 }
 
-.logo {
-    margin-bottom: 50px;
-}
-
 .description {
     border: 5px dashed black ;
     color: azure;
     width: 500px;
     background: #636b6f;
 }
+
 
 .profile {
     margin-top: 100px;
