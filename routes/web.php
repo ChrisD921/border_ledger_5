@@ -23,8 +23,7 @@ Route::delete('/management/{id}', 'PersonnelController@destroy')->middleware('ch
 Route::get('/ledger', 'PasserbyController@index');
 Route::post('/ledger', 'PasserbyController@store');
 
-//ajax:
-Route::get('/ledger-ajax', 'PasserbyController@dataAjax');
+
 
 Route::get('/profile', 'PersonnelController@profile');
 

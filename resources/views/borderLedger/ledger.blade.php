@@ -93,11 +93,11 @@
                                             <div class="col-8">
                                                 <select id="pass_trans_mode_in" name="pass_trans_mode" class="form-control">
                                                     <option value="">Choose...</option>
-                                                    <option value="1">Walking</option>
-                                                    <option value="2">Delivery Vehicle</option>
-                                                    <option value="3">PUV</option>
-                                                    <option value="4">Private Vehicle</option>
-                                                    <option value="5">Company Vehicle</option>
+                                                    <option value="Walking">Walking</option>
+                                                    <option value="Delivery Vehicle">Delivery Vehicle</option>
+                                                    <option value="PUV">PUV</option>
+                                                    <option value="Private Vehicle">Private Vehicle</option>
+                                                    <option value="Company Vehicle">Company Vehicle</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -147,9 +147,9 @@
                                             <div class="col-8">
                                                 <select id="pass_border_in" name="pass_border" class="form-control" style="width:100%">
                                                     <option value="">Select Border...</option>
-                                                    <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
-                                                    <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
-                                                    <option value="3">M.I. Quezon (boun. Cabancalan-Talamban)</option>
+                                                    <option value="A.S. Fortuna St. (boun. Banilad)">A.S. Fortuna St. (boun. Banilad)</option>
+                                                    <option value="Panagdait (boun. H. Cortes/Bridge)">Panagdait (boun. H. Cortes/Bridge)</option>
+                                                    <option value="M.I. Quezon (boun. Cabancalan-Talamban)">M.I. Quezon (boun. Cabancalan-Talamban)</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -250,12 +250,12 @@
                                             </div>
                                             <div class="col-8">
                                                 <select id="pass_trans_mode" name="pass_trans_mode" class="form-control">
-                                                    <option selected>Choose...</option>
-                                                    <option value="1">Walking</option>
-                                                    <option value="2">Delivery Vehicle</option>
-                                                    <option value="3">PUV</option>
-                                                    <option value="4">Private Vehicle</option>
-                                                    <option value="5">Company Vehicle</option>
+                                                    <option value="">Choose...</option>
+                                                    <option value="Walking">Walking</option>
+                                                    <option value="Delivery Vehicle">Delivery Vehicle</option>
+                                                    <option value="PUV">PUV</option>
+                                                    <option value="Private Vehicle">Private Vehicle</option>
+                                                    <option value="Company Vehicle">Company Vehicle</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -305,9 +305,9 @@
                                             <div class="col-8">
                                                 <select id="pass_border_out" name="pass_border" class="form-control" style="width:100%">
                                                     <option selected>Select Border...</option>
-                                                    <option value="1">A.S. Fortuna St. (boun. Banilad)</option>
-                                                    <option value="2">Panagdait (boun. H. Cortes/Bridge)</option>
-                                                    <option value="3">M.I. Quezon (boun. Cabancalan-Talamban)</option>
+                                                    <option value="A.S. Fortuna St. (boun. Banilad)">A.S. Fortuna St. (boun. Banilad)</option>
+                                                    <option value="Panagdait (boun. H. Cortes/Bridge)">Panagdait (boun. H. Cortes/Bridge)</option>
+                                                    <option value="M.I. Quezon (boun. Cabancalan-Talamban)">M.I. Quezon (boun. Cabancalan-Talamban)</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -343,7 +343,7 @@
                                 @foreach($passerby as $passerbys)
                                 <tr>
                                     <td>{{$passerbys->created_at}}</td>
-                                    <td>Border</td> 
+                                    <td>{{$passerbys->pass_border}}</td> 
                                     <td>{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}</td>
                                     <td>
                                         @if ($passerbys->pass_ingoing_or_outgoing==0)
@@ -377,6 +377,7 @@
                                                         <li class="list-group-item">Vehicle Plate Number: {{$passerbys->pass_plate_num}}</li>
                                                         <li class="list-group-item">Purpose: {{$passerbys->pass_purpose}}</li>
                                                         <li class="list-group-item">Destination: {{$passerbys->pass_des}}</li>
+                                                        <li class="list-group-item">Border: {{$passerbys->pass_border}}</li>
                                                     </ul>
                                                 </div>
                                             </div>

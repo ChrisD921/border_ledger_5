@@ -54,7 +54,7 @@ class PasserbyController extends Controller
         $passerby->pass_plate_num= request('pass_plate_num');
         $passerby->pass_purpose= request('pass_purpose');
         $passerby->pass_des= request('pass_des');
-        // $passerby->inputBorder = request('inputBorder');
+        $passerby->pass_border = request('pass_border');
         $passerby->pass_ingoing_or_outgoing = request('pass_ingoing_or_outgoing');
         
 
@@ -65,20 +65,7 @@ class PasserbyController extends Controller
         return redirect('/ledger')->with('success_msg' , 'New Personnel Account Successfully Created!');
     }
 
-    public function dataAjax(Request $request)
-    {
-        $data = [];
-        
-        if($request->has('q')){
-            $search = $request->q;
-            $data = Passerby::table("passerbys")
-            		->select("id","pass_border_in")
-            		->where('pass_border_in','LIKE',"%$search%")
-            		->get();
-        }
-
-        return response()->json($data);
-    }
+    
 
     /**
      * Display the specified resource.

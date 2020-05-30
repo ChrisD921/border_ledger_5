@@ -20,10 +20,11 @@ class CreatePasserbysTable extends Migration
             $table->integer('pass_age');
             $table->string('pass_id_type');
             $table->string('pass_id_num');
-            $table->integer('pass_trans_mode');
+            $table->string('pass_trans_mode');
             $table->string('pass_plate_num');
             $table->string('pass_purpose');
             $table->string('pass_des');
+            $table->string('pass_border');
             $table->integer('pass_ingoing_or_outgoing');
             $table->rememberToken();
 
