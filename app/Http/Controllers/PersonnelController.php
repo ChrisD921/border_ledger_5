@@ -38,7 +38,7 @@ class PersonnelController extends Controller
 
         $personnel = Personnel::latest()->get();
 
-        return view('/borderLedger/management', ['pers' => $personnel]);
+        return view('/management', ['pers' => $personnel]);
     }
 
 
@@ -57,7 +57,7 @@ class PersonnelController extends Controller
         
 
 
-        return redirect('/borderLedger/management')->with('success_msg' , 'New Personnel Account Successfully Created!');
+        return redirect('/management')->with('success_msg' , 'New Personnel Account Successfully Created!');
     }
 
     public function profile(){
@@ -66,14 +66,14 @@ class PersonnelController extends Controller
         $personnel =Personnel::findOrFail(auth()->user()->id);
         
 
-        return view('/borderLedger/profile',['personnel' => $personnel] );
+        return view('/profile',['personnel' => $personnel] );
     }
 
     public function destroy($id){
         $personnel = Personnel::findOrFail($id);
         $personnel->delete();
 
-        return redirect('/borderLedger/management');
+        return redirect('/management');
 
     }
 

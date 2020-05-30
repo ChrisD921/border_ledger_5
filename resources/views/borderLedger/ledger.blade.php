@@ -32,7 +32,7 @@
                                                 <label for="pass_first_name_in">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_first_name_in" name="pass_first_name" placeholder="">
+                                                <input type="text" class="form-control" id="pass_first_name_in" name="pass_first_name" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -42,7 +42,7 @@
                                                 <label for="pass_last_name_in">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_last_name_in" name="pass_last_name" placeholder="">
+                                                <input type="text" class="form-control" id="pass_last_name_in" name="pass_last_name" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -55,7 +55,7 @@
                                                 <label for="pass_age_in">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_age_in" name="pass_age" placeholder="">
+                                                <input type="text" class="form-control" id="pass_age_in" name="pass_age" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@
                                                 <label for="pass_id_type_in">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_type_in"  name="pass_id_type" placeholder="">
+                                                <input type="text" class="form-control" id="pass_id_type_in"  name="pass_id_type" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@
                                                 <label for="pass_id_num_in">ID Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_num_in" name="pass_id_num" placeholder="">
+                                                <input type="text" class="form-control" id="pass_id_num_in" name="pass_id_num" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@
                                                 <label for="pass_trans_mode_in">Mode of Transport</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_trans_mode_in" name="pass_trans_mode" class="form-control">
+                                                <select id="pass_trans_mode_in" name="pass_trans_mode" class="form-control" required>
                                                     <option value="">Choose...</option>
                                                     <option value="Walking">Walking</option>
                                                     <option value="Delivery Vehicle">Delivery Vehicle</option>
@@ -108,7 +108,8 @@
                                                 <label for="pass_plate_num_in">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_plate_num_in" name="pass_plate_num" placeholder="">
+                                                <input type="text" class="form-control" id="pass_plate_num_in" name="pass_plate_num" placeholder="" required>
+                                                <small id="help" class="form-text text-muted">If mode of transport is walking then please indicate '-'</small>
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +146,7 @@
                                                 <label for="pass_border_in">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_border_in" name="pass_border" class="form-control" style="width:100%">
+                                                <select id="pass_border_in" name="pass_border" class="form-control" style="width:100%" required>
                                                     <option value="">Select Border...</option>
                                                     <option value="A.S. Fortuna St. (boun. Banilad)">A.S. Fortuna St. (boun. Banilad)</option>
                                                     <option value="Panagdait (boun. H. Cortes/Bridge)">Panagdait (boun. H. Cortes/Bridge)</option>
@@ -190,7 +191,7 @@
                                                 <label for="pass_first_name">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_first_name" name="pass_first_name" placeholder="">
+                                                <input type="text" class="form-control" id="pass_first_name" name="pass_first_name" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -200,7 +201,7 @@
                                                 <label for="pass_last_name">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_last_name" name="pass_last_name" placeholder="">
+                                                <input type="text" class="form-control" id="pass_last_name" name="pass_last_name" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -213,7 +214,7 @@
                                                 <label for="pass_age">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_age" name="pass_age" placeholder="">
+                                                <input type="text" class="form-control" id="pass_age" name="pass_age" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -226,7 +227,7 @@
                                                 <label for="pass_id_type">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_type" name="pass_id_type" placeholder="">
+                                                <input type="text" class="form-control" id="pass_id_type" name="pass_id_type" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -236,7 +237,7 @@
                                                 <label for="pass_id_num">ID Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_num" name="pass_id_num" placeholder="">
+                                                <input type="text" class="form-control" id="pass_id_num" name="pass_id_num" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -249,7 +250,7 @@
                                                 <label for="pass_trans_mode">Mode of Transport</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_trans_mode" name="pass_trans_mode" class="form-control">
+                                                <select id="pass_trans_mode" name="pass_trans_mode" class="form-control" required>
                                                     <option value="">Choose...</option>
                                                     <option value="Walking">Walking</option>
                                                     <option value="Delivery Vehicle">Delivery Vehicle</option>
@@ -266,7 +267,8 @@
                                                 <label for="pass_plate_num">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_plate_num" name="pass_plate_num" placeholder="">
+                                                <input type="text" class="form-control" id="pass_plate_num" name="pass_plate_num" placeholder="" required>
+                                                <small id="help" class="form-text text-muted">If mode of transport is walking then please indicate '-'</small>
                                             </div>
                                         </div>
                                     </div>
@@ -278,7 +280,7 @@
                                             <label for="pass_purpose">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                        <textarea class="form-control" id="pass_purpose" name="pass_purpose" rows="3"></textarea>
+                                            <textarea class="form-control" id="pass_purpose" name="pass_purpose" rows="3"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -290,7 +292,7 @@
                                                 <label for="pass_des">Destination</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_des" name="pass_des" placeholder="">
+                                                <input type="text" class="form-control" id="pass_des" name="pass_des" placeholder="" required>
                                             </div>
                                         </div>
                                     </div>
@@ -303,8 +305,8 @@
                                                 <label for="pass_border_out">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_border_out" name="pass_border" class="form-control" style="width:100%">
-                                                    <option selected>Select Border...</option>
+                                                <select id="pass_border_out" name="pass_border" class="form-control" style="width:100%" required>
+                                                    <option value="">Select Border...</option>
                                                     <option value="A.S. Fortuna St. (boun. Banilad)">A.S. Fortuna St. (boun. Banilad)</option>
                                                     <option value="Panagdait (boun. H. Cortes/Bridge)">Panagdait (boun. H. Cortes/Bridge)</option>
                                                     <option value="M.I. Quezon (boun. Cabancalan-Talamban)">M.I. Quezon (boun. Cabancalan-Talamban)</option>
