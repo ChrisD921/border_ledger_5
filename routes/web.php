@@ -15,19 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'PersonnelController@indexhome');
-Route::get('/borderLedger/management', 'PersonnelController@view')->middleware('checkadmin');
-Route::post('/borderLedger/management' , 'PersonnelController@store' )->middleware('checkadmin');
-Route::delete('/borderLedger/management/{id}', 'PersonnelController@destroy')->middleware('checkadmin');
 
-
-Route::get('/management', 'PersonnelController@index');
-
-Route::post('/management' , 'PersonnelController@store' );
-
-Route::delete('/management/{id}', 'PersonnelController@destroy');
+Route::get('/management', 'PersonnelController@index')->middleware('checkadmin');
+Route::post('/management' , 'PersonnelController@store' )->middleware('checkadmin');
+Route::delete('/management/{id}', 'PersonnelController@destroy')->middleware('checkadmin');
 
 Route::get('/ledger', 'PasserbyController@index');
 Route::post('/ledger', 'PasserbyController@store');
+
 //ajax:
 Route::get('/ledger-ajax', 'PasserbyController@dataAjax');
 

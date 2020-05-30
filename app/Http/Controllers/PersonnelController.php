@@ -20,22 +20,12 @@ class PersonnelController extends Controller
 
 
     public function index() {
-        // $user = User::findorfail(auth()->user()->id);
-        
-        // if (auth()->user->is_admin==1) {
-        //     return redirect('/borderLedger/management');
-        // }else {
-        //     return redirect('/borderLedger/ledger');
-        // }
-
-        return ('/borderLedger/management');
-    }
-
-
-    public function view(){
         $personnel = Personnel::paginate(5);
-        return view('/borderLedger/management', compact('personnel'));
+        return view('/management', compact('personnel'));
     }
+
+
+   
 
     public function show(){
         //$personnel = Personnel::all();
