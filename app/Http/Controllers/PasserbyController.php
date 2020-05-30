@@ -15,7 +15,7 @@ class PasserbyController extends Controller
     //This displays the page and allows the 
     //Passerby data to be viewed in pages. (Pagination)
     public function index() {
-        $passerby = Passerby::paginate(5);
+        $passerby = Passerby::paginate(20);
         return view('/borderLedger/ledger', compact('passerby'));
     }
 
@@ -45,7 +45,7 @@ class PasserbyController extends Controller
         $passerby->pass_age= request('pass_age');
         $passerby->pass_id_type= request('pass_id_type');
         $passerby->pass_id_num= request('pass_id_num');
-        $passerby->pass_trans_mode= request('pass_trans_mmode');
+        $passerby->pass_trans_mode= request('pass_trans_mode');
         $passerby->pass_plate_num= request('pass_plate_num');
         $passerby->pass_purpose= request('pass_purpose');
         $passerby->pass_des= request('pass_des');
@@ -83,7 +83,6 @@ class PasserbyController extends Controller
      */
     public function show()
     {
-
         //$passerby = Passerby::latest()->get();
 
         //return view('/borderLedger/ledger', ['pass' => $passerby]);

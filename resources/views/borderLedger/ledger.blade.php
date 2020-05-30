@@ -23,7 +23,7 @@
                         </div>
 
                         <div class="modal-body">
-                            <form action="/borderLedger/ledger" method="post">
+                            <form action="/ledger" method="post">
                                 @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -181,7 +181,7 @@
                         </div>
 
                         <div class="modal-body">
-                            <form action="/borderLedger/ledger" method="post">
+                            <form action="/ledger" method="post">
                                 @csrf
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -353,19 +353,17 @@
                                         @endif
                                     </td>
                                     </td>
-                                    <td>{{$passerbys->inputPlateNum}} </td>
-                                    <!-- <td><button type="menu">View (TODO)</button></td> -->
+                                    <td>{{$passerbys->pass_plate_num}} </td>
                                     <td>
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetails">
-                                            VIEW
-                                        </button>
+                                        <a id="viewBtn" type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetails{{$passerbys->id}}">VIEW</a>
                                     </td>
 
-                                    <div class="modal fade" id="viewDetails" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal fade" id="viewDetails{{$passerbys->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLongTitle">{{$passerbys->inputFName}} {{$passerbys->inputLName}}'s Form</h5>
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}'s Form</h5>
+                                                    <h5 class="modal-title" id="viewTitle"></h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -397,6 +395,7 @@
     </section>
 
     <script type="text/javascript">
+    // $( document ).ready(function() {
         $('#pass_border_in').select2({
             ajax: {
             url: '/ledger-ajax',
@@ -434,6 +433,17 @@
             cache: true
             }
         });
+
+        $('#viewBtn').click('show.bs.modal', function (event) {
+            console.log("1");
+            var button = $(event.relatedTarget)
+            var recipient = button.data('whatever') 
+            var modal = $(this)
+            modal.find('.modal-title').text('New message to ' + recipient)
+            // modal.find('.modal-body input').val(recipient)
+            console.log("2");
+        })
+    // });
     </script>
 
 @endsection

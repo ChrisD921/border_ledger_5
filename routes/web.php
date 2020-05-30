@@ -30,6 +30,7 @@ Route::get('/ledger-ajax', 'PasserbyController@dataAjax');
 
 Route::get('/profile', 'PersonnelController@profile');
 
+
 //dd(request()->all());
 // Route::get('/admin', function () {
 //     return view('management');
