@@ -148,9 +148,15 @@
                                             <div class="col-8">
                                                 <select id="pass_border_in" name="pass_border" class="form-control" style="width:100%" required>
                                                     <option value="">Select Border...</option>
-                                                    <option value="A.S. Fortuna St. (boun. Banilad)">A.S. Fortuna St. (boun. Banilad)</option>
+                                                    <option value="Ouano Avenue (Cebu International Port)">Ouano Avenue (Cebu International Port)</option>
+                                                    <option value="M.C. Briones Street (Subangdaku)">M.C. Briones Street (Subangdaku)</option>
                                                     <option value="Panagdait (boun. H. Cortes/Bridge)">Panagdait (boun. H. Cortes/Bridge)</option>
-                                                    <option value="M.I. Quezon (boun. Cabancalan-Talamban)">M.I. Quezon (boun. Cabancalan-Talamban)</option>
+                                                    <option value="A.S. Fortuna St. (boun. Banilad)">A.S. Fortuna St. (boun. Banilad)</option>
+                                                    <option value="H. Abellana Street (Canduman-Talamban)">H. Abellana Street (Canduman-Talamban)</option><option value="D.M Cortes/Cansaga Bridge (boun. Consolacion)">D.M Cortes/Cansaga Bridge (boun. Consolacion)</option>
+                                                    <option value="M.I. Quezon (boun. Cabancalan-Talamban)">M.I. Quezon (boun. Cabancalan-Talamban)</option><option value="H. Abellana St. (boun. Canduman)">H. Abellana St. (boun. Canduman)</option>
+                                                    <option value="M.C Briones (boun. Jagobiao Consolacion">M.C Briones (boun. Jagobiao Consolacion</option>
+                                                    <option value="Marcelo Fernan Bridge">Marcelo Fernan Bridge</option>
+                                                    <option value="Osmena Bridge">H. Abellana Street (Old Bridge)</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -307,9 +313,15 @@
                                             <div class="col-8">
                                                 <select id="pass_border_out" name="pass_border" class="form-control" style="width:100%" required>
                                                     <option value="">Select Border...</option>
-                                                    <option value="A.S. Fortuna St. (boun. Banilad)">A.S. Fortuna St. (boun. Banilad)</option>
+                                                    <option value="Ouano Avenue (Cebu International Port)">Ouano Avenue (Cebu International Port)</option>
+                                                    <option value="M.C. Briones Street (Subangdaku)">M.C. Briones Street (Subangdaku)</option>
                                                     <option value="Panagdait (boun. H. Cortes/Bridge)">Panagdait (boun. H. Cortes/Bridge)</option>
-                                                    <option value="M.I. Quezon (boun. Cabancalan-Talamban)">M.I. Quezon (boun. Cabancalan-Talamban)</option>
+                                                    <option value="A.S. Fortuna St. (boun. Banilad)">A.S. Fortuna St. (boun. Banilad)</option>
+                                                    <option value="H. Abellana Street (Canduman-Talamban)">H. Abellana Street (Canduman-Talamban)</option><option value="D.M Cortes/Cansaga Bridge (boun. Consolacion)">D.M Cortes/Cansaga Bridge (boun. Consolacion)</option>
+                                                    <option value="M.I. Quezon (boun. Cabancalan-Talamban)">M.I. Quezon (boun. Cabancalan-Talamban)</option><option value="H. Abellana St. (boun. Canduman)">H. Abellana St. (boun. Canduman)</option>
+                                                    <option value="M.C Briones (boun. Jagobiao Consolacion">M.C Briones (boun. Jagobiao Consolacion</option>
+                                                    <option value="Marcelo Fernan Bridge">Marcelo Fernan Bridge</option>
+                                                    <option value="Osmena Bridge">H. Abellana Street (Old Bridge)</option>
                                                 </select>
                                             </div>
                                         </div>
