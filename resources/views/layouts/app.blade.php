@@ -100,5 +100,10 @@
         Copyright 2020 BorderLedger5
     </footer>
 
+    <script>
+        $('#pass_border_in').select2({});
+        $('#pass_border_out').select2({});
+    </script>
+
 </body>
 </html>
