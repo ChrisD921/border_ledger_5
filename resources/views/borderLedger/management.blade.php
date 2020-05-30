@@ -2,12 +2,16 @@
 
 
 @section('content')
+{{-- @can  --}}
+
+
+
 
 <section class="jumbotron text-center">
     <div class="jumbotron">
       <h1 class="jumbotron-heading">Border Ledger</h1>
       <p class="msg"> {{ session('success_msg') }}</p>
-
+    
 
       {{-- Form to create more Personnel Accounts --}}
         <div class="flex-center position-ref full-height">
@@ -81,5 +85,6 @@
         </div>
 
     </div>
+    
 </section>
 @endsection

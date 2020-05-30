@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Personnel;
+use App\User;
+
 class PersonnelController extends Controller
 {
 
@@ -18,13 +20,21 @@ class PersonnelController extends Controller
 
 
     public function index() {
-        $personnel = Personnel::paginate(5);
-        return view('/borderLedger/management', compact('personnel'));
+        // $user = User::findorfail(auth()->user()->id);
+        
+        // if (auth()->user->is_admin==1) {
+        //     return redirect('/borderLedger/management');
+        // }else {
+        //     return redirect('/borderLedger/ledger');
+        // }
+
+        return ('/borderLedger/management');
     }
 
 
-    public function login(){
-        return view('/borderLedger/login');
+    public function view(){
+        $personnel = Personnel::paginate(5);
+        return view('/borderLedger/management', compact('personnel'));
     }
 
     public function show(){

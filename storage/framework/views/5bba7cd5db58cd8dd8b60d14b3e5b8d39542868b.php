@@ -1,12 +1,17 @@
 
 
+
 <?php $__env->startSection('content'); ?>
+
+
+
+
 
 <section class="jumbotron text-center">
     <div class="jumbotron">
       <h1 class="jumbotron-heading">Border Ledger</h1>
       <p class="msg"> <?php echo e(session('success_msg')); ?></p>
-
+    
 
       
         <div class="flex-center position-ref full-height">
@@ -81,6 +86,7 @@
         </div>
 
     </div>
+    
 </section>
 <?php $__env->stopSection(); ?>
 

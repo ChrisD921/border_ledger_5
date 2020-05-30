@@ -28,6 +28,17 @@ class LoginController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
+    public function redirectTo()
+    {
+        if (auth()->user()->is_admin) {
+            return '/borderLedger/management';
+        } else if (auth()->user()->is_authenticated) {
+            return '/borderLedger/ledger';
+        } else {
+            return '/home';
+        }
+    }
+
     /**
      * Create a new controller instance.
      *

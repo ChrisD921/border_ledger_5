@@ -13,35 +13,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', 'PersonnelController@indexhome');
+Route::get('/borderLedger/management', 'PersonnelController@view')->middleware('checkadmin');
+Route::post('/borderLedger/management' , 'PersonnelController@store' )->middleware('checkadmin');
+Route::delete('/borderLedger/management/{id}', 'PersonnelController@destroy')->middleware('checkadmin');
 
-//Route::get('/borderLedger/login', 'PersonnelController@login');
 
-Route::get('/borderLedger/management', 'PersonnelController@index');
+//admin Pages
+// Route::get('/borderLedger/index', function(){
+//     return view('/borderLedger/management');
+// })->middleware('checkadmin');
 
-Route::post('/borderLedger/management' , 'PersonnelController@store' );
+// Route::get('/borderLedger/management' , 'PersonnelController@view' );
+// // Route::post('/borderLedger/management' , 'PersonnelController@store' )->middleware('checkadmin');;
+// // Route::delete('/borderLedger/management/{id}', 'PersonnelController@destroy')->middleware('checkadmin');;
 
-Route::delete('/borderLedger/management/{id}', 'PersonnelController@destroy');
 
+//Personnel Pages
 Route::get('/borderLedger/ledger', 'PasserbyController@index');
 Route::post('/borderLedger/ledger', 'PasserbyController@store');
 
 Route::get('/borderLedger/profile', 'PersonnelController@profile');
 
-//dd(request()->all());
-// Route::get('/admin', function () {
-//     return view('management');
-// });
-
-// Route::get('/profile', function () {
-//     return view('profile');
-// });
-
-// Route::get('/ledger', function () {
-//     return view('ledger');
-// });
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('index');
+
+
+

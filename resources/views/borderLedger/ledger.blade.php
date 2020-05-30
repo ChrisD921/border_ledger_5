@@ -1,11 +1,11 @@
-@extends('layouts.home')
+@extends('layouts.app')
 
 @section('content')
 
     <section class="jumbotron text-center">
         <div class="jumbotron">
           <h1 class="jumbotron-heading">Border Ledger</h1>
-
+          <p class="msg"> {{ session('redirect_msg') }}</p>
             <!-- Button triggers -->
             <a href="#" class="btn btn-primary my-2" data-toggle="modal" data-target="#goingin">IN</a>
             <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#goingout">OUT</a>
@@ -354,7 +354,7 @@
                                         @endif
                                     </td>
                                     </td>
-                                    <td>{{$passerbys->inputPlateNum}} </td>
+                                    <td>{{$passerbys->pass_plate_num}} </td>
                                     <!-- <td><button type="menu">View (TODO)</button></td> -->
                                     <td>
                                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetails">
@@ -366,7 +366,7 @@
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLongTitle">{{$passerbys->inputFName}} {{$passerbys->inputLName}}'s Form</h5>
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}'s Form</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                     </button>

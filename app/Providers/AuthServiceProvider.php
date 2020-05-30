@@ -14,6 +14,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         // 'App\Model' => 'App\Policies\ModelPolicy',
+       //   'App\Personnel' => 'App\Policies\PersonnelPolicy',
     ];
 
     /**
@@ -24,6 +25,15 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+
+        Gate::define('accessManagement', function($user) {
+            if ($user->is_admin==1) {
+                return redirect('/borderLedger/management');
+            }else {
+                return redirect('/borderLedger/ledger');
+            }
+           
+        });
 
         //
         // Gate::define('view-management', function ($user) {

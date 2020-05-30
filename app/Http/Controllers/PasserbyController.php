@@ -12,6 +12,11 @@ class PasserbyController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     //This displays the page and allows the 
     //Passerby data to be viewed in pages. (Pagination)
     public function index() {
