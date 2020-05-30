@@ -18,6 +18,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+
+    <!-- Select2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+
 </head>
 <body>
     <div id="app">
@@ -33,7 +41,12 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ledger">Ledger</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/management">Management</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -55,8 +68,11 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/home">
+                                    <!-- <a class="dropdown-item" href="/home">
                                         Home
+                                    </a> -->
+                                    <a class="dropdown-item" href="/profile">
+                                        Profile
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -79,5 +95,15 @@
             @yield('content')
         </main>
     </div>
+
+    <footer class="fixed-bottom">
+        Copyright 2020 BorderLedger5
+    </footer>
+
+    <script>
+        $('#pass_border_in').select2({});
+        $('#pass_border_out').select2({});
+    </script>
+
 </body>
 </html>

@@ -20,21 +20,19 @@ Route::post('/borderLedger/management' , 'PersonnelController@store' )->middlewa
 Route::delete('/borderLedger/management/{id}', 'PersonnelController@destroy')->middleware('checkadmin');
 
 
-//admin Pages
-// Route::get('/borderLedger/index', function(){
-//     return view('/borderLedger/management');
-// })->middleware('checkadmin');
+Route::get('/management', 'PersonnelController@index');
 
-// Route::get('/borderLedger/management' , 'PersonnelController@view' );
-// // Route::post('/borderLedger/management' , 'PersonnelController@store' )->middleware('checkadmin');;
-// // Route::delete('/borderLedger/management/{id}', 'PersonnelController@destroy')->middleware('checkadmin');;
+Route::post('/management' , 'PersonnelController@store' );
 
+Route::delete('/management/{id}', 'PersonnelController@destroy');
 
-//Personnel Pages
-Route::get('/borderLedger/ledger', 'PasserbyController@index');
-Route::post('/borderLedger/ledger', 'PasserbyController@store');
+Route::get('/ledger', 'PasserbyController@index');
+Route::post('/ledger', 'PasserbyController@store');
+//ajax:
+Route::get('/ledger-ajax', 'PasserbyController@dataAjax');
 
-Route::get('/borderLedger/profile', 'PersonnelController@profile');
+Route::get('/profile', 'PersonnelController@profile');
+
 
 Auth::routes();
 

@@ -49,16 +49,13 @@ html, body {
     margin-bottom: 30px;
 }
 
-.logo {
-    margin-bottom: 30px;
-}
-
 .description {
     border: 5px dashed black ;
     color: azure;
     width: 500px;
     background: #636b6f;
 }
+
 
 .profile {
     margin-top: 100px;
@@ -71,8 +68,4 @@ footer {
     text-align: center;
     background-color: #636b6f;
     padding: 15px;
-}
-
-.loginButton {
-    
 }
