@@ -5,7 +5,7 @@
     <section class="jumbotron text-center">
         <div class="jumbotron">
           <h1 class="jumbotron-heading">Border Ledger</h1>
-          <p class="msg"> {{ session('redirect_msg') }}</p>
+          <p class="msg"> {{ session('msg') }}</p>
             <!-- Button triggers -->
             <a href="#" class="btn btn-primary my-2" data-toggle="modal" data-target="#goingin">IN</a>
             <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#goingout">OUT</a>

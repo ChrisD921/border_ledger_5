@@ -62,7 +62,7 @@ class PasserbyController extends Controller
         
 
 
-        return redirect('/ledger')->with('success_msg' , 'New Personnel Account Successfully Created!');
+        return redirect('/ledger')->with('msg' , 'New Personnel Account Successfully Created!');
     }
 
     

@@ -17,7 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PersonnelController@indexhome');
 
 Route::get('/management', 'PersonnelController@index')->middleware('checkadmin');
+Route::post('/management' , 'PersonnelController@validator' )->middleware('checkadmin');
 Route::post('/management' , 'PersonnelController@store' )->middleware('checkadmin');
+
+//Route::get('/management/Find', 'PersonnelController@find')->middleware('checkadmin');
 Route::delete('/management/{id}', 'PersonnelController@destroy')->middleware('checkadmin');
 
 Route::get('/ledger', 'PasserbyController@index');
@@ -26,6 +29,8 @@ Route::post('/ledger', 'PasserbyController@store');
 
 
 Route::get('/profile', 'PersonnelController@profile');
+Route::get('/profile/store', 'PersonnelController@validator');
+Route::post('/profile/store', 'PersonnelController@profileStore');
 
 
 Auth::routes();

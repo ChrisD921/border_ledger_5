@@ -31,9 +31,9 @@ class LoginController extends Controller
     public function redirectTo()
     {
         if (auth()->user()->is_admin) {
-            return '/borderLedger/management';
+            return '/management';
         } else if (auth()->user()->is_authenticated) {
-            return '/borderLedger/ledger';
+            return '/ledger';
         } else {
             return '/home';
         }
