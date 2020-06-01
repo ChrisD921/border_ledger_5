@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Passerby;
+use App\Border;
+
 class PasserbyController extends Controller
 {
     /**
@@ -41,10 +43,14 @@ class PasserbyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+
+     public function check(){
+
+     }
+
+     public function store()
     {
         $passerby = new Passerby();
-
         $passerby->pass_first_name= request('pass_first_name');
         $passerby->pass_last_name= request('pass_last_name');
         $passerby->pass_age= request('pass_age');
@@ -56,16 +62,43 @@ class PasserbyController extends Controller
         $passerby->pass_des= request('pass_des');
         $passerby->pass_border = request('pass_border');
         $passerby->pass_ingoing_or_outgoing = request('pass_ingoing_or_outgoing');
-        
-
         $passerby->save();
-        
+
+        $border = new Border();
+        $border->pass_border= request('pass_border');
+        $border->save();
 
 
         return redirect('/ledger')->with('msg' , 'New Personnel Account Successfully Created!');
     }
 
-    
+    //AJAX request
+    public function getBorderNames(Request $request) {
+        $search = $request->search;
+
+        if($search == ''){
+            $borders = Passerby::orderby('pass_border','asc')
+                        ->select('id', 'pass_border')
+                        ->get();
+        }else{
+            $borders = Passerby::orderby('pass_border','asc')
+                        ->select('id', 'pass_border')
+                        ->where('pass_border','like','%'.$search.'%')
+                        ->get();
+        }
+
+        $response = array();
+        foreach($borders as $border){
+            $response[] = array(
+                "id"=>$border->pass_border,
+                "text"=>$border->pass_border
+            );
+        }
+
+
+        echo json_encode($response);
+        exit;
+    }
 
     /**
      * Display the specified resource.

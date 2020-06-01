@@ -20,11 +20,18 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
-    <!-- Select2 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <link href="{{ asset('select2/dist/css/select2.min.css') }}" rel="stylesheet" type="text/css"/>
 
+    <!-- JQuery -->
+    <script type="text/javascript" src="{{ asset('jquery-3.5.1.min.js') }}"></script>    
+
+    <!-- Select2 JS -->
+    <script type="text/javascript" src="{{ asset('select2/dist/js/select2.min.js') }}"></script>
+
+    <!-- Select2 CSS -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" /> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script> -->
 
 </head>
 <body>
@@ -101,8 +108,54 @@
     </footer>
 
     <script>
-        $('#pass_border_in').select2({});
-        $('#pass_border_out').select2({});
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+        
+        $('#pass_border_in').select2({
+            placeholder: 'Select Border',
+            tags: true,
+            ajax: { 
+            url: "{{route('borderLedger.getBorderNames')}}",
+            type: "post",
+            dataType: 'json',
+            delay: 250,
+            data: function (params) {
+                return {
+                _token: CSRF_TOKEN,
+                search: params.term // search term
+                };
+            },
+            processResults: function (response) {
+                return {
+                results: response
+                };
+            },
+            cache: true
+            }
+        });
+
+        $('#pass_border_out').select2({
+            placeholder: 'Select Border',
+            tags: true,
+            ajax: { 
+            url: "{{route('borderLedger.getBorderNames')}}",
+            type: "post",
+            dataType: 'json',
+            delay: 250,
+            data: function (params) {
+                return {
+                _token: CSRF_TOKEN,
+                search: params.term // search term
+                };
+            },
+            processResults: function (response) {
+                return {
+                results: response
+                };
+            },
+            cache: true
+            }
+        });
+
     </script>
 
 </body>
