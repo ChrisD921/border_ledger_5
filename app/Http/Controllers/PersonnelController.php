@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Personnel;
 use App\User;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 class PersonnelController extends Controller
 {
 
@@ -22,25 +21,7 @@ class PersonnelController extends Controller
     }
 
 
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'date_of_birth' => ['required', 'date'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
-    }
-
     public function show(){
-        //$personnel = Personnel::all();
-
-        //Orders by whatever data you want... Adding "desc" reverses the order...
-        //$personnel = Personnel::orderBy('last_name', 'desc')->get();
-
-        //Gets only the rows that are equal to the given value or text
-        //$personnel = Personnel::where('last_name','Bieber')->get();
 
         $personnel = Personnel::latest()->get();
 
@@ -67,7 +48,8 @@ class PersonnelController extends Controller
 
     public function profile(){
         
-        //Finds the id of the current Personnel/User and then grabs that row and places it in the array of data below to display in the Profile.
+        //Finds the id of the current Personnel/User and then grabs that row 
+        //and places it in the array of data below to display in the Profile.
         $personnel =Personnel::findOrFail(auth()->user()->id);
 
          return view('/profile',['personnel' => $personnel] );

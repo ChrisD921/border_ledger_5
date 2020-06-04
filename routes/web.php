@@ -26,7 +26,6 @@ Route::post('/ledger', 'PasserbyController@store');
 Route::post('/ledger/getBorderNames','PasserbyController@getBorderNames')->name('borderLedger.getBorderNames');
 
 Route::get('/profile', 'PersonnelController@profile');
-Route::get('/profile/store', 'PersonnelController@validator');
 Route::post('/profile/store', 'PersonnelController@profileStore');
 
 Auth::routes();

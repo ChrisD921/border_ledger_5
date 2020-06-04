@@ -18,9 +18,6 @@
             <a href="/management">Add a Personnel Account</a><br>
             <a href="/ledger">Add a Passerby Entry</a><br>
         </div>
-
-        <!-- <a class="btn btn-secondary my-2" href="/borderLedger/login"> Login </a> -->
-        <!-- <a class="btn btn-secondary my-2" href="/auth/register"> Register </a> -->
     </div>
 </div>
 @endsection

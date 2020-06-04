@@ -11,7 +11,6 @@
                         <h5 class="card-header">Profile</h5>
                         <div class="card-body">
                             <h5 class="card-title">User</h5>
-                            {{-- <p class="card-text">details...</p> --}}
                             Name: {{$personnel->first_name}} {{$personnel->last_name}} <br>
                             Date of Birth: {{$personnel->date_of_birth}} <br>
                             Email: {{$personnel->email}} <br>
