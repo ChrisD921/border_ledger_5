@@ -67,7 +67,7 @@ class PasserbyController extends Controller
         return redirect('/ledger')->with('msg' , 'New Personnel Account Successfully Created!');
     }
 
-    //AJAX request
+    /* AJAX request */
     public function getBorderNames(Request $request) {
         $search = $request->search;
 
@@ -103,9 +103,7 @@ class PasserbyController extends Controller
      */
     public function show()
     {
-        //$passerby = Passerby::latest()->get();
-
-        //return view('/borderLedger/ledger', ['pass' => $passerby]);
+        //
     }
 
     /**

@@ -122,7 +122,7 @@
                                             <label for="pass_purpose_in">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                        <textarea class="form-control" id="pass_purpose_in" name="pass_purpose" rows="3"></textarea>
+                                        <textarea class="form-control" id="pass_purpose_in" name="pass_purpose" rows="3" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@
                                                 <label for="pass_des_in">Destination</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_des_in" name="pass_des" placeholder="">
+                                                <textarea class="form-control" id="pass_des_in" name="pass_des" rows="3" required></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -289,7 +289,7 @@
                                                 <label for="pass_des">Destination</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_des" name="pass_des" placeholder="" required>
+                                                <textarea class="form-control" id="pass_des" name="pass_des" rows="3" required></textarea>
                                             </div>
                                         </div>
                                     </div>

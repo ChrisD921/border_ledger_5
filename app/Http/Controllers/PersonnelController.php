@@ -10,14 +10,6 @@ use Illuminate\Support\Facades\Validator;
 class PersonnelController extends Controller
 {
 
-//     public function find($id)
-// {
-//         $found = Personnel::findOrFail($id);
-
-//         return view('/management', compact('found'));
-//         //return redirect('/management' )->with(compact('found'));
-// }
-
     public function indexhome(){
 
         return view('/index');
@@ -26,15 +18,6 @@ class PersonnelController extends Controller
 
     public function index() {
         $personnel = Personnel::paginate(5);
-
-        // $found = new Personnel();
-
-        // $found->first_name ="" ;
-        // $found->last_name ="" ;
-        // $found->date_of_birth ="";
-        // $found->email = "";
-        // $found->password = "";
-
         return view('/management', compact('personnel'));
     }
 
@@ -66,9 +49,6 @@ class PersonnelController extends Controller
 
 
     public function store(){
-
-        
-
 
         $personnel = new Personnel();
 
