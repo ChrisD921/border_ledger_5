@@ -50,9 +50,10 @@ html, body {
 }
 
 .description {
-    border: 5px dashed black ;
+    border: 5px solid black ;
     color: azure;
-    width: 500px;
+    width: 1000px;
+    padding: 20px;
     background: #636b6f;
 }
 
@@ -69,3 +70,5 @@ footer {
     background-color: #636b6f;
     padding: 15px;
 }
+
+
