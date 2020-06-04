@@ -102,7 +102,7 @@ class PersonnelController extends Controller
             $personnel->first_name = request('first_name');
             $personnel->last_name = request('last_name');
             $personnel->date_of_birth = request('date_of_birth');
-            //$personnel->email = request('email');
+            $personnel->email = request('email');
             $personnel->password =Hash::make( request('password'));
     
             $personnel->save();

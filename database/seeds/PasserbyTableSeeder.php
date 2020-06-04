@@ -138,8 +138,8 @@ class PasserbyTableSeeder extends Seeder
 
         $p9 = new Passerby;
 
-        $p9->pass_first_name = "Lexi";
-        $p9->pass_last_name = "Ogtong";
+        $p9->pass_first_name = "Yasha";
+        $p9->pass_last_name = "Co";
         $p9->pass_age= 22;
         $p9->pass_id_type="Driver's License";
         $p9->pass_id_num = "G12-16-001055";
