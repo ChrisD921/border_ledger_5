@@ -24,12 +24,8 @@
                                 <label for="first_name">First Name:</label>
                             </div>
                             <div class="col-9">
-                                <input type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" id="first_name" name="first_name">
-                                @error('first_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="text" class="form-control" name="first_name" id="first_name" name="first_name" required>
+                                
                             </div>
                         </div>
                         <div class="form-group row">
@@ -37,12 +33,7 @@
                                 <label for="last_name">Last Name:</label>
                             </div>
                             <div class="col-9">
-                                <input type="text" class="form-control @error('last_name') is-invalid @enderror" id="last_name" name="last_name"><br>
-                                @error('last_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="text" class="form-control" id="last_name" name="last_name" required><br>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -50,12 +41,7 @@
                                 <label for="date_of_birth">Date of Birth:</label>
                             </div>
                             <div class="col-9">
-                                <input type="date" class="form-control @error('date_of_birth') is-invalid @enderror" id="date_of_birth" name="date_of_birth"><br>
-                                @error('date_of_birth')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" required><br>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -63,12 +49,7 @@
                                 <label for="email">Email:</label>
                             </div>
                             <div class="col-9">
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email"><br>
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="email" class="form-control" id="email" name="email" required><br>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -76,12 +57,7 @@
                                 <label for="password">Password:</label>
                             </div>
                             <div class="col-9">
-                                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password"><br>
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                <input type="password" class="form-control" id="password" name="password" required><br>   
                             </div>
                         </div>
                         <div class="form-group row">

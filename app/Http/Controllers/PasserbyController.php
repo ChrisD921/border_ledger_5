@@ -43,11 +43,6 @@ class PasserbyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
-     public function check(){
-
-     }
-
      public function store()
     {
         $passerby = new Passerby();
@@ -146,11 +141,4 @@ class PasserbyController extends Controller
     {
         //
     }
-
-    // public function ledger(){
-    //     return view('/borderLedger/ledger');
-    // }
-    // public function profile(){
-    //     return view('/borderLedger/profile');
-    // }
 }

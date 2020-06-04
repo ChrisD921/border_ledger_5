@@ -12,7 +12,7 @@
             <a href="#" class="btn btn-danger my-2" data-toggle="modal" data-target="#goingout">OUT</a>
           
             <!-- Going in Modal -->
-            <div class="modal fade" id="goingin" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal fade" id="goingin" role="dialog">
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
                         
@@ -167,7 +167,7 @@
             </div>
 
             <!-- Going out Modal -->
-            <div class="modal fade" id="goingout" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal fade" id="goingout" role="dialog">
             <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                     <div class="modal-content">
                         
@@ -277,7 +277,7 @@
                                             <label for="pass_purpose">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                            <textarea class="form-control" id="pass_purpose" name="pass_purpose" rows="3"></textarea>
+                                            <textarea class="form-control" id="pass_purpose" name="pass_purpose" rows="3" required></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -338,7 +338,7 @@
                             <tbody>
                                 @foreach($passerby as $passerbys)
                                 <tr>
-                                    <td>{{$passerbys->created_at}}</td>
+                                    <td>{{$passerbys->created_at->format('F j,Y h:i:s a') }}</td>
                                     <td>{{$passerbys->pass_border}}</td> 
                                     <td>{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}</td>
                                     <td>
@@ -358,8 +358,7 @@
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLongTitle">{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}'s Form</h5>
-                                                    {{-- <h5 class="modal-title" id="viewTitle"></h5> --}}
+                                                    <h5 class="modal-title">{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}'s Form</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                     </button>

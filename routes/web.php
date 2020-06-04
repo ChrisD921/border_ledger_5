@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PersonnelController@indexhome');
 
 Route::get('/management', 'PersonnelController@index')->middleware('checkadmin');
-Route::post('/management' , 'PersonnelController@validator' )->middleware('checkadmin');
+//Route::post('/management' , 'PersonnelController@validator' )->middleware('checkadmin');
 Route::post('/management' , 'PersonnelController@store' )->middleware('checkadmin');
 
 //Route::get('/management/Find', 'PersonnelController@find')->middleware('checkadmin');

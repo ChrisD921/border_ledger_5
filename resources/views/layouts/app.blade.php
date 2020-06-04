@@ -78,9 +78,12 @@
                                     <!-- <a class="dropdown-item" href="/home">
                                         Home
                                     </a> -->
-                                    <a class="dropdown-item" href="/profile">
-                                        Profile
-                                    </a>
+                                    @if (auth()->user()->id == 0)
+                                        <a class="dropdown-item" href="/profile">
+                                            Profile
+                                        </a>
+                                    @endif
+                                    
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
