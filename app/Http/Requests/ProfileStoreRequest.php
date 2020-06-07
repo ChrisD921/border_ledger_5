@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
+use Illuminate\Validation\Rule;
 class ProfileStoreRequest extends FormRequest
 {
     /**
@@ -23,12 +23,17 @@ class ProfileStoreRequest extends FormRequest
      */
     public function rules()
     {
+       
         return [
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'date_of_birth' => 'required|date',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|confirmed'
+            'email' => [
+                'required',
+                Rule::unique('users', 'email')->ignore(auth()->user()->id),
+            ],
+            'password' => 'required|confirmed',
+            
         ];
     }
 

@@ -59,16 +59,11 @@ class PersonnelController extends Controller
          return view('/profile',['personnel' => $personnel] );
     }
 
-    public function profileStore(PersonnelStoreRequest $request ){
+    public function profileStore(ProfileStoreRequest $request ){
 
         $personnel =Personnel::findOrFail(auth()->user()->id);
         
-        Validator::make($personnel, [
-            'email' => [
-                'required',
-                Rule::unique('users')->ignore($user)
-            ],
-        ]);
+       
         
         
         if(request('first_name')== ""){
