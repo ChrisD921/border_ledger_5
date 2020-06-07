@@ -35,9 +35,15 @@
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_first_name_in" name="pass_first_name" placeholder="" >
                                             </div>
-                                            @error('pass_first_name')
-                                                <strong>{{ $message }}</strong>
-                                            @enderror
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_first_name')
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -48,9 +54,15 @@
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_last_name_in" name="pass_last_name" placeholder="" >
                                             </div>
-                                            @error('pass_last_name')
-                                                <strong>{{ $message }}</strong>
-                                            @enderror
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_last_name')
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +76,7 @@
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_age_in" name="pass_age" placeholder="" >
                                             </div>
-                                            @error('pass_age')
+                                            <!-- @error('pass_age')
                                             {{-- Shows the modal immediately after failed validation/redirect --}}
                                                 @if (count($errors) > 0)
                                                 <script type="text/javascript" >
@@ -75,8 +87,27 @@
                                                     });
                                                     </script>
                                                 @endif
-                                                <strong>{{ $message }}</strong>
-                                            @enderror
+                                                    <small style="color: red;">{{ $message }}</small>
+                                            @enderror -->
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_age')
+                                                {{-- Shows the modal immediately after failed validation/redirect --}}
+                                                    @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingin').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
+                                                        <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -90,9 +121,15 @@
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_id_type_in"  name="pass_id_type" placeholder="" >
                                             </div>
-                                            @error('pass_id_type')
-                                                <strong>{{ $message }}</strong>
-                                            @enderror
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_id_type')
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -103,9 +140,15 @@
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_id_num_in" name="pass_id_num" placeholder="" >
                                             </div>
-                                            @error('pass_id_num')
-                                                <strong>{{ $message }}</strong>
-                                            @enderror
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_id_num')
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -117,19 +160,19 @@
                                                 <label for="pass_trans_mode_in">Mode of Transport</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_trans_mode_in" name="pass_trans_mode" class="form-control" >
-                                                    <option value="">Choose...</option>
-                                                    <option value="Walking">Walking</option>
-                                                    <option value="Delivery Vehicle">Delivery Vehicle</option>
-                                                    <option value="PUV">PUV</option>
-                                                    <option value="Private Vehicle">Private Vehicle</option>
-                                                    <option value="Company Vehicle">Company Vehicle</option>
-                                                </select>
+                                                <input type="text" class="form-control" id="pass_trans_mode_in" name="pass_trans_mode" placeholder="">
+                                                <small id="help" class="form-text text-muted">e.g. Walking, Delivery Vehicle, PUV, Private Vehicle, Company Vehicle, etc.</small>
                                             </div>
                                         </div>
-                                        @error('pass_trans_mode')
-                                            <strong>{{ $message }}</strong>
-                                        @enderror
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_trans_mode')
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <div class="row">
@@ -138,12 +181,17 @@
                                             </div>
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_plate_num_in" name="pass_plate_num" placeholder="" >
-                                                <small id="help" class="form-text text-muted">If mode of transport is walking then please indicate '-'</small>
+                                                <small id="help" class="form-text text-muted">If none, please indicate '-'</small>
                                             </div>
-
-                                            @error('pass_plate_num')
-                                                <strong>{{ $message }}</strong>
-                                            @enderror
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_plate_num')
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -154,27 +202,37 @@
                                             <label for="pass_purpose_in">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                        <textarea class="form-control" id="pass_purpose_in" name="pass_purpose" rows="3" ></textarea>
+                                            <textarea class="form-control" id="pass_purpose_in" name="pass_purpose" rows="3" ></textarea>
                                         </div>
-                                        @error('pass_purpose')
-                                            <strong>{{ $message }}</strong>
-                                        @enderror
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                        </div>
+                                        <div class="col-10">
+                                            @error('pass_purpose')
+                                                <small style="color: red;">{{ $message }}</small>
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label for="pass_des_in">Destination</label>
-                                            </div>
-                                            <div class="col-8">
-                                                <textarea class="form-control" id="pass_des_in" name="pass_des" rows="3" ></textarea>
-                                            </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col-2">
+                                            <label for="pass_des_in">Destination</label>
                                         </div>
-                                        @error('pass_des')
-                                             <strong>{{ $message }}</strong>
-                                        @enderror
+                                        <div class="col-10">
+                                            <textarea class="form-control" id="pass_des_in" name="pass_des" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                        </div>
+                                        <div class="col-10">
+                                            @error('pass_des')
+                                                <small style="color: red;">{{ $message }}</small>
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
 
@@ -188,16 +246,20 @@
                                                 <select id="pass_border_in" name="pass_border" class="form-control" style="width:100%" >
                                                 </select>
                                             </div>
-                                            @error('pass_border')
-                                                <strong>{{ $message }}</strong>
-                                            @enderror
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_border')
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <input type="hidden" name="pass_ingoing_or_outgoing" value="0">
-                                
-                                
                                 
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-success">Submit</button>
@@ -234,9 +296,15 @@
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_first_name_out" name="pass_first_name_out" placeholder="" >
                                             </div>
-                                            @error('pass_first_name_out')
-                                             <strong>{{ $message }}</strong>
-                                        @enderror
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_first_name_out')
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -247,9 +315,15 @@
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_last_name_out" name="pass_last_name_out" placeholder="" >
                                             </div>
-                                            @error('pass_last_name_out')
-                                             <strong>{{ $message }}</strong>
-                                        @enderror
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_last_name_out')
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -263,7 +337,7 @@
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_age_out" name="pass_age_out" placeholder="" >
                                             </div>
-                                            @error('pass_age_out')
+                                            <!-- @error('pass_age_out')
 
                                             {{-- Shows the modal immediately after failed validation/redirect --}}
                                                 @if (count($errors) > 0)
@@ -275,8 +349,27 @@
                                                     });
                                                     </script>
                                                 @endif
-                                             <strong>{{ $message }}</strong>
-                                        @enderror
+                                                    <strong>{{ $message }}</strong>
+                                            @enderror -->
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_age_out')
+                                                {{-- Shows the modal immediately after failed validation/redirect --}}
+                                                    @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingout').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
+                                                        <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -290,9 +383,15 @@
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_id_type_out" name="pass_id_type_out" placeholder="" >
                                             </div>
-                                            @error('pass_des_out')
-                                             <strong>{{ $message }}</strong>
-                                        @enderror
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_des_out')
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -302,12 +401,16 @@
                                             </div>
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_id_num_out" name="pass_id_num_out" placeholder="" >
-                                                @error('pass_id_num_out')
-                                                    <strong>{{ $message }}</strong>
-                                                @enderror
-                                            
                                             </div>
-
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
+                                                @error('pass_id_num_out')
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -319,18 +422,17 @@
                                                 <label for="pass_trans_mode_out">Mode of Transport</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_trans_mode_out" name="pass_trans_mode_out" class="form-control" >
-                                                    <option value="">Choose...</option>
-                                                    <option value="Walking">Walking</option>
-                                                    <option value="Delivery Vehicle">Delivery Vehicle</option>
-                                                    <option value="PUV">PUV</option>
-                                                    <option value="Private Vehicle">Private Vehicle</option>
-                                                    <option value="Company Vehicle">Company Vehicle</option>
-                                                </select>
+                                                <input type="text" class="form-control" id="pass_trans_mode" name="pass_trans_mode" placeholder="">
+                                                <small id="help" class="form-text text-muted">e.g. Walking, Delivery Vehicle, PUV, Private Vehicle, Company Vehicle, etc.</small>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
                                                 @error('pass_trans_mode_out')
-                                                    <strong>{{ $message }}</strong>
+                                                    <small style="color: red;">{{ $message }}</small>
                                                 @enderror
-                                            
                                             </div>
                                         </div>
                                     </div>
@@ -341,10 +443,16 @@
                                             </div>
                                             <div class="col-8">
                                                 <input type="text" class="form-control" id="pass_plate_num_out" name="pass_plate_num_out" placeholder="" >
-                                                <small id="help" class="form-text text-muted">If mode of transport is walking then please indicate '-'</small>
+                                                <small id="help" class="form-text text-muted">If none, please indicate '-'</small>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
                                                 @error('pass_plate_num_out')
-                                             <strong>{{ $message }}</strong>
-                                        @enderror
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -357,25 +465,35 @@
                                         </div>
                                         <div class="col-10">
                                             <textarea class="form-control" id="pass_purpose_out" name="pass_purpose_out" rows="3" ></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                        </div>
+                                        <div class="col-10">
                                             @error('pass_purpose_out')
-                                             <strong>{{ $message }}</strong>
-                                        @enderror
+                                                <small style="color: red;">{{ $message }}</small>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label for="pass_des_out">Destination</label>
-                                            </div>
-                                            <div class="col-8">
-                                                <textarea class="form-control" id="pass_des_out" name="pass_des_out" rows="3" ></textarea>
-                                                @error('pass_des_out')
-                                             <strong>{{ $message }}</strong>
-                                        @enderror
-                                            </div>
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col-2">
+                                            <label for="pass_des">Destination</label>
+                                        </div>
+                                        <div class="col-10">
+                                            <textarea class="form-control" id="pass_des" name="pass_des" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-2">
+                                        </div>
+                                        <div class="col-10">
+                                            @error('pass_des_out')
+                                                <small style="color: red;">{{ $message }}</small>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -387,12 +505,16 @@
                                                 <label for="pass_border_out">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_border_out" name="pass_border_out" class="form-control" style="width:100%" >
-                                                    
-                                                </select>
+                                                <select id="pass_border_out" name="pass_border_out" class="form-control" style="width:100%" ></select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                            </div>
+                                            <div class="col-8">
                                                 @error('pass_border_out')
-                                             <strong>{{ $message }}</strong>
-                                        @enderror
+                                                    <small style="color: red;">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
