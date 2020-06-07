@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Personnel;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\PersonnelStoreRequest;
+use App\Http\Requests\ProfileStoreRequest;
+use Illuminate\Validation\Rule;
 class PersonnelController extends Controller
 {
 
@@ -29,13 +32,14 @@ class PersonnelController extends Controller
     }
 
 
-    public function store(){
+    public function store(PersonnelStoreRequest $request){
 
+        
         $personnel = new Personnel();
 
-        $personnel->first_name = request('first_name');
+        $personnel->first_name =request('first_name');
         $personnel->last_name = request('last_name');
-        $personnel->date_of_birth = request('date_of_birth');
+        $personnel->date_of_birth =request('date_of_birth');
         $personnel->email = request('email');
         $personnel->password = Hash::make( request('password'));
         
@@ -55,9 +59,18 @@ class PersonnelController extends Controller
          return view('/profile',['personnel' => $personnel] );
     }
 
-    public function profileStore(){
-        
+    public function profileStore(PersonnelStoreRequest $request ){
+
         $personnel =Personnel::findOrFail(auth()->user()->id);
+        
+        Validator::make($personnel, [
+            'email' => [
+                'required',
+                Rule::unique('users')->ignore($user)
+            ],
+        ]);
+        
+        
         if(request('first_name')== ""){
             return redirect('/profile');
         }else{
@@ -70,6 +83,11 @@ class PersonnelController extends Controller
             $personnel->save();
         return redirect('/profile')->with('msg' , 'Personnel Account Successfully Edited!');
         }
+
+
+        
+
+
             
     }
 
@@ -77,7 +95,7 @@ class PersonnelController extends Controller
         $personnel = Personnel::findOrFail($id);
         $personnel->delete();
 
-        return redirect('/management');
+        return redirect('/management')->with('msg' , 'Personnel Account Successfully Deleted!');
 
     }
 

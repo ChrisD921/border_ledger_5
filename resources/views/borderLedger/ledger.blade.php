@@ -33,8 +33,11 @@
                                                 <label for="pass_first_name_in">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_first_name_in" name="pass_first_name" placeholder="" required>
+                                                <input type="text" class="form-control" id="pass_first_name_in" name="pass_first_name" placeholder="" >
                                             </div>
+                                            @error('pass_first_name')
+                                                <strong>{{ $message }}</strong>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -43,8 +46,11 @@
                                                 <label for="pass_last_name_in">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_last_name_in" name="pass_last_name" placeholder="" required>
+                                                <input type="text" class="form-control" id="pass_last_name_in" name="pass_last_name" placeholder="" >
                                             </div>
+                                            @error('pass_last_name')
+                                                <strong>{{ $message }}</strong>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -56,8 +62,21 @@
                                                 <label for="pass_age_in">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_age_in" name="pass_age" placeholder="" required>
+                                                <input type="text" class="form-control" id="pass_age_in" name="pass_age" placeholder="" >
                                             </div>
+                                            @error('pass_age')
+                                            {{-- Shows the modal immediately after failed validation/redirect --}}
+                                                @if (count($errors) > 0)
+                                                <script type="text/javascript" >
+                                                
+                                                    $(document).ready(function(){
+                        
+                                                    $('#goingin').modal('show'); 
+                                                    });
+                                                    </script>
+                                                @endif
+                                                <strong>{{ $message }}</strong>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -69,8 +88,11 @@
                                                 <label for="pass_id_type_in">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_type_in"  name="pass_id_type" placeholder="" required>
+                                                <input type="text" class="form-control" id="pass_id_type_in"  name="pass_id_type" placeholder="" >
                                             </div>
+                                            @error('pass_id_type')
+                                                <strong>{{ $message }}</strong>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -79,8 +101,11 @@
                                                 <label for="pass_id_num_in">ID Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_num_in" name="pass_id_num" placeholder="" required>
+                                                <input type="text" class="form-control" id="pass_id_num_in" name="pass_id_num" placeholder="" >
                                             </div>
+                                            @error('pass_id_num')
+                                                <strong>{{ $message }}</strong>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +117,7 @@
                                                 <label for="pass_trans_mode_in">Mode of Transport</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_trans_mode_in" name="pass_trans_mode" class="form-control" required>
+                                                <select id="pass_trans_mode_in" name="pass_trans_mode" class="form-control" >
                                                     <option value="">Choose...</option>
                                                     <option value="Walking">Walking</option>
                                                     <option value="Delivery Vehicle">Delivery Vehicle</option>
@@ -102,6 +127,9 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        @error('pass_trans_mode')
+                                            <strong>{{ $message }}</strong>
+                                        @enderror
                                     </div>
                                     <div class="form-group col-md-6">
                                         <div class="row">
@@ -109,9 +137,13 @@
                                                 <label for="pass_plate_num_in">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_plate_num_in" name="pass_plate_num" placeholder="" required>
+                                                <input type="text" class="form-control" id="pass_plate_num_in" name="pass_plate_num" placeholder="" >
                                                 <small id="help" class="form-text text-muted">If mode of transport is walking then please indicate '-'</small>
                                             </div>
+
+                                            @error('pass_plate_num')
+                                                <strong>{{ $message }}</strong>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -122,8 +154,11 @@
                                             <label for="pass_purpose_in">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                        <textarea class="form-control" id="pass_purpose_in" name="pass_purpose" rows="3" required></textarea>
+                                        <textarea class="form-control" id="pass_purpose_in" name="pass_purpose" rows="3" ></textarea>
                                         </div>
+                                        @error('pass_purpose')
+                                            <strong>{{ $message }}</strong>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -134,9 +169,12 @@
                                                 <label for="pass_des_in">Destination</label>
                                             </div>
                                             <div class="col-8">
-                                                <textarea class="form-control" id="pass_des_in" name="pass_des" rows="3" required></textarea>
+                                                <textarea class="form-control" id="pass_des_in" name="pass_des" rows="3" ></textarea>
                                             </div>
                                         </div>
+                                        @error('pass_des')
+                                             <strong>{{ $message }}</strong>
+                                        @enderror
                                     </div>
                                 </div>
 
@@ -147,14 +185,20 @@
                                                 <label for="pass_border_in">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_border_in" name="pass_border" class="form-control" style="width:100%" required>
+                                                <select id="pass_border_in" name="pass_border" class="form-control" style="width:100%" >
                                                 </select>
                                             </div>
+                                            @error('pass_border')
+                                                <strong>{{ $message }}</strong>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
                                 
                                 <input type="hidden" name="pass_ingoing_or_outgoing" value="0">
+                                
+                                
+                                
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-success">Submit</button>
                                 </div>
@@ -185,34 +229,27 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_first_name">First Name</label>
+                                                <label for="pass_first_name_out">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_first_name" name="pass_first_name" placeholder="" required>
+                                                <input type="text" class="form-control" id="pass_first_name_out" name="pass_first_name_out" placeholder="" >
                                             </div>
+                                            @error('pass_first_name_out')
+                                             <strong>{{ $message }}</strong>
+                                        @enderror
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_last_name">Last Name</label>
+                                                <label for="pass_last_name_out">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_last_name" name="pass_last_name" placeholder="" required>
+                                                <input type="text" class="form-control" id="pass_last_name_out" name="pass_last_name_out" placeholder="" >
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label for="pass_age">Age</label>
-                                            </div>
-                                            <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_age" name="pass_age" placeholder="" required>
-                                            </div>
+                                            @error('pass_last_name_out')
+                                             <strong>{{ $message }}</strong>
+                                        @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -221,21 +258,25 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_id_type">ID Type</label>
+                                                <label for="pass_age_out">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_type" name="pass_id_type" placeholder="" required>
+                                                <input type="text" class="form-control" id="pass_age_out" name="pass_age_out" placeholder="" >
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label for="pass_id_num">ID Number</label>
-                                            </div>
-                                            <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_num" name="pass_id_num" placeholder="" required>
-                                            </div>
+                                            @error('pass_age_out')
+
+                                            {{-- Shows the modal immediately after failed validation/redirect --}}
+                                                @if (count($errors) > 0)
+                                                <script type="text/javascript" >
+                                                
+                                                    $(document).ready(function(){
+                        
+                                                    $('#goingout').modal('show'); 
+                                                    });
+                                                    </script>
+                                                @endif
+                                             <strong>{{ $message }}</strong>
+                                        @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -244,10 +285,41 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_trans_mode">Mode of Transport</label>
+                                                <label for="pass_id_type_out">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_trans_mode" name="pass_trans_mode" class="form-control" required>
+                                                <input type="text" class="form-control" id="pass_id_type_out" name="pass_id_type_out" placeholder="" >
+                                            </div>
+                                            @error('pass_des_out')
+                                             <strong>{{ $message }}</strong>
+                                        @enderror
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label for="pass_id_num_out">ID Number</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <input type="text" class="form-control" id="pass_id_num_out" name="pass_id_num_out" placeholder="" >
+                                                @error('pass_id_num_out')
+                                                    <strong>{{ $message }}</strong>
+                                                @enderror
+                                            
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <label for="pass_trans_mode_out">Mode of Transport</label>
+                                            </div>
+                                            <div class="col-8">
+                                                <select id="pass_trans_mode_out" name="pass_trans_mode_out" class="form-control" >
                                                     <option value="">Choose...</option>
                                                     <option value="Walking">Walking</option>
                                                     <option value="Delivery Vehicle">Delivery Vehicle</option>
@@ -255,17 +327,24 @@
                                                     <option value="Private Vehicle">Private Vehicle</option>
                                                     <option value="Company Vehicle">Company Vehicle</option>
                                                 </select>
+                                                @error('pass_trans_mode_out')
+                                                    <strong>{{ $message }}</strong>
+                                                @enderror
+                                            
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_plate_num">Vehicle Plate Number</label>
+                                                <label for="pass_plate_num_out">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_plate_num" name="pass_plate_num" placeholder="" required>
+                                                <input type="text" class="form-control" id="pass_plate_num_out" name="pass_plate_num_out" placeholder="" >
                                                 <small id="help" class="form-text text-muted">If mode of transport is walking then please indicate '-'</small>
+                                                @error('pass_plate_num_out')
+                                             <strong>{{ $message }}</strong>
+                                        @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -274,10 +353,13 @@
                                 <div class="form-group">
                                     <div class="form-row">
                                         <div class="col-2">
-                                            <label for="pass_purpose">Purpose</label>
+                                            <label for="pass_purpose_out">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                            <textarea class="form-control" id="pass_purpose" name="pass_purpose" rows="3" required></textarea>
+                                            <textarea class="form-control" id="pass_purpose_out" name="pass_purpose_out" rows="3" ></textarea>
+                                            @error('pass_purpose_out')
+                                             <strong>{{ $message }}</strong>
+                                        @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -286,10 +368,13 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_des">Destination</label>
+                                                <label for="pass_des_out">Destination</label>
                                             </div>
                                             <div class="col-8">
-                                                <textarea class="form-control" id="pass_des" name="pass_des" rows="3" required></textarea>
+                                                <textarea class="form-control" id="pass_des_out" name="pass_des_out" rows="3" ></textarea>
+                                                @error('pass_des_out')
+                                             <strong>{{ $message }}</strong>
+                                        @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -302,15 +387,21 @@
                                                 <label for="pass_border_out">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_border_out" name="pass_border" class="form-control" style="width:100%" required>
+                                                <select id="pass_border_out" name="pass_border_out" class="form-control" style="width:100%" >
                                                     
                                                 </select>
+                                                @error('pass_border_out')
+                                             <strong>{{ $message }}</strong>
+                                        @enderror
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <input type="hidden" name="pass_ingoing_or_outgoing" value="1">
+                                
+                                
+                                
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-success">Submit</button>
                                 </div>
