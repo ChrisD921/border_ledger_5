@@ -42,9 +42,11 @@ class ProfileStoreRequest extends FormRequest
     {
         return [
             'first_name.required' => ' First Name is required!',
-            //'first_name.string' => ' is required!',
+            'first_name.max' => 'First Name cannot be longer than 255 characters!',
             'last_name.required' => ' Last Name is required!',
+            'last_name.max' => 'Last Name cannot be longer than 255 characters!',
             'date_of_birth.required' => 'Date of Birth is required!',
+            'date_of_birth.date' => 'Date of Birth must be in Date Format!',
             'email.required' => 'Email is required!',
             'email.unique' => 'That email has already been taken!',
             'password.required' => 'Password is required!',
