@@ -52,7 +52,7 @@
                             <a class="nav-link" href="/ledger">Ledger</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/management">Management</a>
+                            <a class="nav-link" href="/management">User Management</a>
                         </li>
                     </ul>
 
