@@ -441,34 +441,153 @@
                                     </td>
                                     </td>
                                     <td>{{$passerbys->pass_plate_num}} </td>
+                                    <!-- View Button Trigger -->
                                     <td>
-                                        <a id="viewBtn" type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetails{{$passerbys->id}}">VIEW</a>
-                                    </td>
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetails{{$passerbys->id}}">VIEW</button>
+                                        <!-- View Modal -->
+                                        <div class="modal fade" id="viewDetails{{$passerbys->id}}" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                                <!-- View Content -->
+                                                <div class="modal-content">
+                                                    <!-- View Header -->
+                                                    <div class="modal-header">
+                                                        <h2 class="modal-title" id="exampleModalLongTitle">{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}'s Form</h2>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <!-- View Body -->
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-4">
+                                                                            <h5 style="font-size: 15px;">First Name:</h5>
+                                                                        </div>
+                                                                        <div class="col-8">
+                                                                            <p style="color: blue;">{{$passerbys->pass_first_name}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-4">
+                                                                            <h5 style="font-size: 15px;">Last Name:</h5>
+                                                                        </div>
+                                                                        <div class="col-8">
+                                                                            <p style="color: blue;">{{$passerbys->pass_last_name}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 
-                                    <div class="modal fade" id="viewDetails{{$passerbys->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}'s Form</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                    </button>
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-4">
+                                                                            <h5 style="font-size: 15px;">Age:</h5>
+                                                                        </div>
+                                                                        <div class="col-8">
+                                                                            <p style="color: blue;">{{$passerbys->pass_age}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-4">
+                                                                            <h5 style="font-size: 15px;">ID Type:</h5>
+                                                                        </div>
+                                                                        <div class="col-8">
+                                                                            <p style="color: blue;">{{$passerbys->pass_id_type}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-4">
+                                                                            <h5 style="font-size: 15px;">ID Number:</h5>
+                                                                        </div>
+                                                                        <div class="col-8">
+                                                                            <p style="color: blue;">{{$passerbys->pass_id_num}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-4">
+                                                                            <h5 style="font-size: 15px;">Mode of Transport:</h5>
+                                                                        </div>
+                                                                        <div class="col-8">
+                                                                            <p style="color: blue;">{{$passerbys->pass_trans_mode}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-4">
+                                                                            <h5 style="font-size: 15px;">Vehicle Plate Number:</h5>
+                                                                        </div>
+                                                                        <div class="col-8">
+                                                                            <p style="color: blue;">{{$passerbys->pass_plate_num}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-4">
+                                                                            <h5 style="font-size: 15px;">Purpose:</h5>
+                                                                        </div>
+                                                                        <div class="col-8">
+                                                                            <p style="color: blue;">{{$passerbys->pass_purpose}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-4">
+                                                                            <h5 style="font-size: 15px;">Destination:</h5>
+                                                                        </div>
+                                                                        <div class="col-8">
+                                                                            <p style="color: blue;">{{$passerbys->pass_des}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-4">
+                                                                            <h5 style="font-size: 15px;">Border:</h5>
+                                                                        </div>
+                                                                        <div class="col-8">
+                                                                            <p style="color: blue;">{{$passerbys->pass_border}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <!-- End of View Body -->
                                                 </div>
-                                                <div class="modal-body">
-                                                    <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item">Age: {{$passerbys->pass_age}}</li>
-                                                        <li class="list-group-item">ID Type: {{$passerbys->pass_id_type}}</li>
-                                                        <li class="list-group-item">Id Number: {{$passerbys->pass_id_num}}</li>
-                                                        <li class="list-group-item">Mode of Transport: {{$passerbys->pass_trans_mode}}</li>
-                                                        <li class="list-group-item">Vehicle Plate Number: {{$passerbys->pass_plate_num}}</li>
-                                                        <li class="list-group-item">Purpose: {{$passerbys->pass_purpose}}</li>
-                                                        <li class="list-group-item">Destination: {{$passerbys->pass_des}}</li>
-                                                        <li class="list-group-item">Border: {{$passerbys->pass_border}}</li>
-                                                    </ul>
-                                                </div>
+                                                <!-- End of View Content -->
                                             </div>
                                         </div>
-                                    </div>
+                                        <!-- End of View Modal -->
+                                    </td>
 
                                 </tr>
                                 @endforeach
