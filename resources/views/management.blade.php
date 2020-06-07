@@ -145,18 +145,50 @@
                                                     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                                                         <div class="modal-content">
                                                             
-                                                            <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalCenterTitle">View Details</h5>
+                                                            <div class="modal-header text-center">
+                                                                <h5 class="modal-title w-100" id="exampleModalCenterTitle">Account Details</h5>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                                 </button>
                                                             </div>
                                             
                                                             <div class="modal-body">
-                                                                <h5 class="card-title">User</h5>
-                                                                <p class="card-text">Name: {{$personnels->first_name}} {{$personnels->last_name}} </p><br>
-                                                                <p class="card-text">Date of Birth: {{$personnels->date_of_birth}} </p><br>
-                                                                <p class="card-text">Email: {{$personnels->email}} </p><br>
+
+                                                                <form>  
+                                                                    <div class="form-group row">
+                                                                        <div class="col-3">
+                                                                            <label for="first_name">First Name:</label>
+                                                                        </div>
+                                                                        <div class="col-9">
+                                                                            <p>{{$personnels->first_name}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-3">
+                                                                            <label for="last_name">Last Name:</label>
+                                                                        </div>
+                                                                        <div class="col-9">
+                                                                            <p>{{$personnels->last_name}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-3">
+                                                                            <label for="date_of_birth">Date of Birth:</label>
+                                                                        </div>
+                                                                        <div class="col-9">
+                                                                            <p>{{$personnels->date_of_birth}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <div class="col-3">
+                                                                            <label for="email">Email:</label>
+                                                                        </div>
+                                                                        <div class="col-9">
+                                                                            <p>{{$personnels->email}}</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                                
                                                             </div>
                                     
                                                         </div>
