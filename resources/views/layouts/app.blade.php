@@ -74,11 +74,12 @@
                                     <!-- <a class="dropdown-item" href="/home">
                                         Home
                                     </a> -->
-                                    @if (auth()->user()->is_admin == 0)
+                                    {{-- The Admin Should Be Able to Edit Their Own Profile --}}
+                                    {{-- @if (auth()->user()->is_admin == 0) --}}
                                         <a class="dropdown-item" href="/profile">
                                             Profile
                                         </a>
-                                    @endif
+                                    {{-- @endif --}}
                                     
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
