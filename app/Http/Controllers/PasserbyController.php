@@ -49,11 +49,11 @@ class PasserbyController extends Controller
                 $passerby->purpose= request('purpose');
                 $passerby->destination= request('destination');
 
-                $passerby->pass_border = request('pass_border');
+                $passerby->border_name = request('border_name');
                 
 
                 $border = new Border();
-                $border->pass_border= request('pass_border');
+                $border->border_name= request('border_name');
             }else{
                 $passerby->first_name= request('first_name_out');
                 $passerby->last_name= request('last_name_out');
@@ -68,11 +68,11 @@ class PasserbyController extends Controller
 
 
 
-                $passerby->pass_border = request('pass_border_out');
+                $passerby->border_name = request('border_name_out');
                 
 
                 
-                $border->pass_border= request('pass_border_out');
+                $border->border_name= request('border_name_out');
 
             }
         $passerby->direction = request('direction');
@@ -87,21 +87,21 @@ class PasserbyController extends Controller
         $search = $request->search;
 
         if($search == ''){
-            $borders = Passerby::orderby('pass_border','asc')
-                        ->select('id', 'pass_border')
+            $borders = Passerby::orderby('border_name','asc')
+                        ->select('id', 'border_name')
                         ->get();
         }else{
-            $borders = Passerby::orderby('pass_border','asc')
-                        ->select('id', 'pass_border')
-                        ->where('pass_border','like','%'.$search.'%')
+            $borders = Passerby::orderby('border_name','asc')
+                        ->select('id', 'border_name')
+                        ->where('border_name','like','%'.$search.'%')
                         ->get();
         }
 
         $response = array();
         foreach($borders as $border){
             $response[] = array(
-                "id"=>$border->pass_border,
-                "text"=>$border->pass_border
+                "id"=>$border->border_name,
+                "text"=>$border->border_name
             );
         }
 

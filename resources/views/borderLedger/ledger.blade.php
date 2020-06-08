@@ -240,10 +240,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_border_in">Border</label>
+                                                <label for="border_name_in">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_border_in" name="pass_border" class="form-control" style="width:100%" >
+                                                <select id="border_name_in" name="border_name" class="form-control" style="width:100%" >
                                                 </select>
                                             </div>
                                         </div>
@@ -251,7 +251,7 @@
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_border')
+                                                @error('border_name')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -502,17 +502,17 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_border_out">Border</label>
+                                                <label for="border_name_out">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="pass_border_out" name="pass_border_out" class="form-control" style="width:100%" ></select>
+                                                <select id="border_name_out" name="border_name_out" class="form-control" style="width:100%" ></select>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_border_out')
+                                                @error('border_name_out')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -552,7 +552,7 @@
                                 @foreach($passerby as $passerbys)
                                 <tr>
                                     <td>{{$passerbys->created_at->format('F j,Y h:i:s a') }}</td>
-                                    <td>{{$passerbys->pass_border}}</td> 
+                                    <td>{{$passerbys->border_name}}</td> 
                                     <td>{{$passerbys->first_name}} {{$passerbys->last_name}}</td>
                                     <td>
                                         @if ($passerbys->direction==0)
@@ -696,7 +696,7 @@
                                                                             <h5 style="font-size: 15px;">Border:</h5>
                                                                         </div>
                                                                         <div class="col-8">
-                                                                            <p style="color: blue;">{{$passerbys->pass_border}}</p>
+                                                                            <p style="color: blue;">{{$passerbys->border_name}}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
