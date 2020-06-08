@@ -118,7 +118,7 @@ class PasserbyTableSeeder extends Seeder
         $p7->plate_num="GAM_333";
         $p7->purpose="Shopping";
         $p7->destination="Robinsons Galleria";
-        $p7->pass_border="Tagbao";
+        $p7->pass_border="Marcelo Fernan Bridge";
         $p7->direction=0;
         $p7->save();
         $p8 = new Passerby;
@@ -132,7 +132,7 @@ class PasserbyTableSeeder extends Seeder
         $p8->plate_num="HFG-765";
         $p8->purpose="Shopping";
         $p8->destination="Robinsons Galleria";
-        $p8->pass_border="Tabunan";
+        $p8->pass_border="M.C. Briones Street (Subangdaku)";
         $p8->direction=0;
         $p8->save(); 
 
