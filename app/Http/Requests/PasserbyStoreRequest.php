@@ -34,7 +34,7 @@ class PasserbyStoreRequest extends FormRequest
                 'plate_num' => 'required',
                 'purpose' => 'required|string',
                 'destination' => 'required|string',
-                'pass_border' => 'required|string' 
+                'border_name' => 'required|string' 
             ];
         }else{
             return [
@@ -47,7 +47,7 @@ class PasserbyStoreRequest extends FormRequest
                 'plate_num_out' => 'required',
                 'purpose_out' => 'required|string',
                 'destination_out' => 'required|string',
-                'pass_border_out' => 'required|string' 
+                'border_name_out' => 'required|string' 
             ];
             
         }
@@ -67,7 +67,7 @@ class PasserbyStoreRequest extends FormRequest
             'plate_num.required' => "The Passerby's Plate Number or Lack thereof is required!",
             'purpose.required' => "The Passerby's Purpose is required!",
             'destination.required' => "The Passerby's Description is required!",
-            'pass_border.required'=> " The Border handling the Passerby is required!",
+            'border_name.required'=> " The Border handling the Passerby is required!",
 
            
             'age_out.required' => "The Passerby's Age is required!",

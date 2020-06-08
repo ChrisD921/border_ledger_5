@@ -25,7 +25,7 @@ class PasserbyTableSeeder extends Seeder
         $p1->plate_num="XYZ-123";
         $p1->purpose="Going Home";
         $p1->destination="Holy Family Village";
-        $p1->pass_border="Osmena Bridge";
+        $p1->border_name="Osmena Bridge";
         $p1->direction=0;
         $p1->save(); 
 
@@ -41,7 +41,7 @@ class PasserbyTableSeeder extends Seeder
         $p2->plate_num="XYZ-123";
         $p2->purpose="Going To Work";
         $p2->destination="Daanbantayan";
-        $p2->pass_border="H. Abellana Street (Canduman-Talamban)";
+        $p2->border_name="H. Abellana Street (Canduman-Talamban)";
         $p2->direction=1;
         $p2->save(); 
 
@@ -56,7 +56,7 @@ class PasserbyTableSeeder extends Seeder
         $p3->plate_num="-";
         $p3->purpose="Visiting Relatives";
         $p3->destination="Santo Nino Village";
-        $p3->pass_border="Tabunan";
+        $p3->border_name="Tabunan";
         $p3->direction=0;
         $p3->save(); 
 
@@ -71,7 +71,7 @@ class PasserbyTableSeeder extends Seeder
         $p4->plate_num="OLD-342";
         $p4->purpose="Going to Guinness World Records Event";
         $p4->destination="Robinsons Galleria";
-        $p4->pass_border="Bulacao";
+        $p4->border_name="Bulacao";
         $p4->direction=0;
         $p4->save(); 
 
@@ -88,7 +88,7 @@ class PasserbyTableSeeder extends Seeder
         $p5->plate_num="UDF-435";
         $p5->purpose="Its Harvesting Season";
         $p5->destination="Bugo City";
-        $p5->pass_border="Kasambagan";
+        $p5->border_name="Kasambagan";
         $p5->direction=1;
         $p5->save(); 
 
@@ -103,7 +103,7 @@ class PasserbyTableSeeder extends Seeder
         $p6->plate_num="YKT-367";
         $p6->purpose="Bartering Meetup";
         $p6->destination="Landers";
-        $p6->pass_border="Lusaran";
+        $p6->border_name="Lusaran";
         $p6->direction=0;
         $p6->save(); 
 
@@ -118,7 +118,7 @@ class PasserbyTableSeeder extends Seeder
         $p7->plate_num="GAM_333";
         $p7->purpose="Shopping";
         $p7->destination="Robinsons Galleria";
-        $p7->pass_border="Marcelo Fernan Bridge";
+        $p7->border_name="Ouano Avenue (Cebu International Port)";
         $p7->direction=0;
         $p7->save();
         $p8 = new Passerby;
@@ -132,7 +132,7 @@ class PasserbyTableSeeder extends Seeder
         $p8->plate_num="HFG-765";
         $p8->purpose="Shopping";
         $p8->destination="Robinsons Galleria";
-        $p8->pass_border="M.C. Briones Street (Subangdaku)";
+        $p8->border_name="M.C. Briones Street (Subangdaku)";
         $p8->direction=0;
         $p8->save(); 
 
@@ -147,7 +147,7 @@ class PasserbyTableSeeder extends Seeder
         $p9->plate_num="JKL-324";
         $p9->purpose="Going Home";
         $p9->destination="Sundance Residences";
-        $p9->pass_border="Sudlon II";
+        $p9->border_name="Sudlon II";
         $p9->direction=0;
         $p9->save(); 
 
@@ -162,7 +162,7 @@ class PasserbyTableSeeder extends Seeder
         $p10->plate_num="OLK-298";
         $p10->purpose="Band Practice";
         $p10->destination="Sound Monster Studios";
-        $p10->pass_border="Sudlon I";
+        $p10->border_name="Sudlon I";
         $p10->direction=0;
         $p10->save(); 
 
@@ -177,7 +177,7 @@ class PasserbyTableSeeder extends Seeder
         $p11->plate_num="YTJ-349";
         $p11->purpose="Business Meeting";
         $p11->destination="Starbucks";
-        $p11->pass_border="Tagbao";
+        $p11->border_name="Tagbao";
         $p11->direction=0;
         $p11->save(); 
 
@@ -192,7 +192,7 @@ class PasserbyTableSeeder extends Seeder
         $p12->plate_num="EFG-543";
         $p12->purpose="Buying Food";
         $p12->destination="Robinsons Galleria";
-        $p12->pass_border="Sinsin";
+        $p12->border_name="Sinsin";
         $p12->direction=0;
         $p12->save(); 
 
@@ -207,7 +207,7 @@ class PasserbyTableSeeder extends Seeder
         $p13->plate_num="TPO-455";
         $p13->purpose="Shopping";
         $p13->destination="Robinsons Galleria";
-        $p13->pass_border="Pamutan";
+        $p13->border_name="Pamutan";
         $p13->direction=0;
         $p13->save(); 
 
@@ -222,7 +222,7 @@ class PasserbyTableSeeder extends Seeder
         $p14->plate_num="POI-477";
         $p14->purpose="Birthday";
         $p14->destination="Robinsons Galleria";
-        $p14->pass_border="Toong Pardo";
+        $p14->border_name="Toong Pardo";
         $p14->direction=0;
         $p14->save(); 
 
@@ -237,7 +237,7 @@ class PasserbyTableSeeder extends Seeder
         $p15->plate_num="YKG-894";
         $p15->purpose="Funeral";
         $p15->destination="Cemetary Park";
-        $p15->pass_border="Inayawan";
+        $p15->border_name="Inayawan";
         $p15->direction=0;
         $p15->save(); 
 
@@ -252,7 +252,7 @@ class PasserbyTableSeeder extends Seeder
         $p16->plate_num="JHG-887";
         $p16->purpose="Shopping";
         $p16->destination="Robinsons Galleria";
-        $p16->pass_border="Mabolo";
+        $p16->border_name="Mabolo";
         $p16->direction=0;
         $p16->save(); 
 
@@ -267,7 +267,7 @@ class PasserbyTableSeeder extends Seeder
         $p17->plate_num="OJK-886";
         $p17->purpose="Shopping";
         $p17->destination="Robinsons Galleria";
-        $p17->pass_border="Banilad";
+        $p17->border_name="Banilad";
         $p17->direction=0;
         $p17->save(); 
 
@@ -282,7 +282,7 @@ class PasserbyTableSeeder extends Seeder
         $p18->plate_num="PUJ-645";
         $p18->purpose="Shopping";
         $p18->destination="Robinsons Galleria";
-        $p18->pass_border="Talamban";
+        $p18->border_name="Talamban";
         $p18->direction=0;
         $p18->save(); 
 
@@ -297,7 +297,7 @@ class PasserbyTableSeeder extends Seeder
         $p19->plate_num="LOP-894";
         $p19->purpose="Shopping";
         $p19->destination="Robinsons Galleria";
-        $p19->pass_border="Bacayan";
+        $p19->border_name="Bacayan";
         $p19->direction=0;
         $p19->save(); 
 
@@ -312,7 +312,7 @@ class PasserbyTableSeeder extends Seeder
         $p20->plate_num="-";
         $p20->purpose="Shopping";
         $p20->destination="Robinsons Galleria";
-        $p20->pass_border="Pit-os";
+        $p20->border_name="Pit-os";
         $p20->direction=0;
         $p20->save(); 
 
@@ -327,7 +327,7 @@ class PasserbyTableSeeder extends Seeder
         $p21->plate_num="INK-555";
         $p21->purpose="Shopping";
         $p21->destination="Robinsons Galleria";
-        $p21->pass_border="Binaliw";
+        $p21->border_name="Binaliw";
         $p21->direction=0;
         $p21->save(); 
         
@@ -342,7 +342,7 @@ class PasserbyTableSeeder extends Seeder
         $p22->plate_num="YKB-808";
         $p22->purpose="Shopping";
         $p22->destination="Robinsons Galleria";
-        $p22->pass_border="Marcelo Fernan Bridge";
+        $p22->border_name="Marcelo Fernan Bridge";
         $p22->direction=0;
         $p22->save(); 
 

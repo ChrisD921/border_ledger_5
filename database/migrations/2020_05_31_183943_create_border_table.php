@@ -15,13 +15,10 @@ class CreateBorderTable extends Migration
     {
         Schema::create('border', function (Blueprint $table) {
             $table->string('id')->default('');
-            $table->string('pass_border');
+            $table->string('border_name');
             $table->timestamps();
         });
 
-        Artisan::call('db:seed', [
-            '--class' => BorderNameTableSeeder::class
-        ]);
     }
 
     /**

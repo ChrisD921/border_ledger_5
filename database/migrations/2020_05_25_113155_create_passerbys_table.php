@@ -24,7 +24,7 @@ class CreatePasserbysTable extends Migration
             $table->string('plate_num');
             $table->string('purpose')->nullable();
             $table->string('destination');
-            $table->string('pass_border')->default('');
+            $table->string('border_name')->default('');
             $table->integer('direction');
 
             $table->timestamps();

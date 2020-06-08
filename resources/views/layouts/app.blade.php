@@ -110,7 +110,7 @@
     <script>
         var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
         
-        $('#pass_border_in').select2({
+        $('#border_name_in').select2({
             placeholder: 'Select Border',
             tags: true,
             ajax: { 
@@ -133,7 +133,7 @@
             }
         });
 
-        $('#pass_border_out').select2({
+        $('#border_name_out').select2({
             placeholder: 'Select Border',
             tags: true,
             ajax: { 
