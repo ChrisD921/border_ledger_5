@@ -15,18 +15,17 @@ class CreatePasserbysTable extends Migration
     {
         Schema::create('passerbys', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('pass_first_name');
-            $table->string('pass_last_name');
-            $table->integer('pass_age');
-            $table->string('pass_id_type');
-            $table->string('pass_id_num');
-            $table->string('pass_trans_mode')->default('');
-            $table->string('pass_plate_num');
-            $table->string('pass_purpose')->nullable();
-            $table->string('pass_des');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->integer('age');
+            $table->string('id_type');
+            $table->string('id_num');
+            $table->string('trans_mode')->default('');
+            $table->string('plate_num');
+            $table->string('purpose')->nullable();
+            $table->string('destination');
             $table->string('pass_border')->default('');
-            $table->integer('pass_ingoing_or_outgoing');
-            $table->rememberToken();
+            $table->integer('direction');
 
             $table->timestamps();
         });

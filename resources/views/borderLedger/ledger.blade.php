@@ -30,17 +30,17 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_first_name_in">First Name</label>
+                                                <label for="first_name_in">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_first_name_in" name="pass_first_name" placeholder="" >
+                                                <input type="text" class="form-control" id="first_name_in" name="first_name" placeholder="" >
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_first_name')
+                                                @error('first_name')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -49,17 +49,17 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_last_name_in">Last Name</label>
+                                                <label for="last_name_in">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_last_name_in" name="pass_last_name" placeholder="" >
+                                                <input type="text" class="form-control" id="last_name_in" name="last_name" placeholder="" >
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_last_name')
+                                                @error('last_name')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -71,12 +71,12 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_age_in">Age</label>
+                                                <label for="age_in">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_age_in" name="pass_age" placeholder="" >
+                                                <input type="text" class="form-control" id="age_in" name="age" placeholder="" >
                                             </div>
-                                            <!-- @error('pass_age')
+                                            <!-- @error('age')
                                             {{-- Shows the modal immediately after failed validation/redirect --}}
                                                 @if (count($errors) > 0)
                                                 <script type="text/javascript" >
@@ -94,7 +94,7 @@
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_age')
+                                                @error('age')
                                                 {{-- Shows the modal immediately after failed validation/redirect --}}
                                                     @if (count($errors) > 0)
                                                     <script type="text/javascript" >
@@ -116,17 +116,17 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_id_type_in">ID Type</label>
+                                                <label for="id_type_in">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_type_in"  name="pass_id_type" placeholder="" >
+                                                <input type="text" class="form-control" id="id_type_in"  name="id_type" placeholder="" >
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_id_type')
+                                                @error('id_type')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -135,17 +135,17 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_id_num_in">ID Number</label>
+                                                <label for="id_num_in">ID Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_num_in" name="pass_id_num" placeholder="" >
+                                                <input type="text" class="form-control" id="id_num_in" name="id_num" placeholder="" >
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_id_num')
+                                                @error('id_num')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -157,10 +157,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_trans_mode_in">Mode of Transport</label>
+                                                <label for="trans_mode_in">Mode of Transport</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_trans_mode_in" name="pass_trans_mode" placeholder="">
+                                                <input type="text" class="form-control" id="trans_mode_in" name="trans_mode" placeholder="">
                                                 <small id="help" class="form-text text-muted">e.g. Walking, Delivery Vehicle, PUV, Private Vehicle, Company Vehicle, etc.</small>
                                             </div>
                                         </div>
@@ -168,7 +168,7 @@
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_trans_mode')
+                                                @error('trans_mode')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -177,10 +177,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_plate_num_in">Vehicle Plate Number</label>
+                                                <label for="plate_num_in">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_plate_num_in" name="pass_plate_num" placeholder="" >
+                                                <input type="text" class="form-control" id="plate_num_in" name="plate_num" placeholder="" >
                                                 <small id="help" class="form-text text-muted">If none, please indicate '-'</small>
                                             </div>
                                         </div>
@@ -188,7 +188,7 @@
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_plate_num')
+                                                @error('plate_num')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -199,17 +199,17 @@
                                 <div class="form-group">
                                     <div class="form-row">
                                         <div class="col-2">
-                                            <label for="pass_purpose_in">Purpose</label>
+                                            <label for="purpose_in">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                            <textarea class="form-control" id="pass_purpose_in" name="pass_purpose" rows="3" ></textarea>
+                                            <textarea class="form-control" id="purpose_in" name="purpose" rows="3" ></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-2">
                                         </div>
                                         <div class="col-10">
-                                            @error('pass_purpose')
+                                            @error('purpose')
                                                 <small style="color: red;">{{ $message }}</small>
                                             @enderror
                                         </div>
@@ -219,10 +219,10 @@
                                 <div class="form-group">
                                     <div class="form-row">
                                         <div class="col-2">
-                                            <label for="pass_des_in">Destination</label>
+                                            <label for="destination_in">Destination</label>
                                         </div>
                                         <div class="col-10">
-                                            <textarea class="form-control" id="pass_des_in" name="pass_des" rows="3"></textarea>
+                                            <textarea class="form-control" id="destination_in" name="destination" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -259,7 +259,7 @@
                                     </div>
                                 </div>
                                 
-                                <input type="hidden" name="pass_ingoing_or_outgoing" value="0">
+                                <input type="hidden" name="direction" value="0">
                                 
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-success">Submit</button>
@@ -291,17 +291,17 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_first_name_out">First Name</label>
+                                                <label for="first_name_out">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_first_name_out" name="pass_first_name_out" placeholder="" >
+                                                <input type="text" class="form-control" id="first_name_out" name="first_name_out" placeholder="" >
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_first_name_out')
+                                                @error('first_name_out')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -310,17 +310,17 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_last_name_out">Last Name</label>
+                                                <label for="last_name_out">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_last_name_out" name="pass_last_name_out" placeholder="" >
+                                                <input type="text" class="form-control" id="last_name_out" name="last_name_out" placeholder="" >
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_last_name_out')
+                                                @error('last_name_out')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -332,12 +332,12 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_age_out">Age</label>
+                                                <label for="age_out">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_age_out" name="pass_age_out" placeholder="" >
+                                                <input type="text" class="form-control" id="age_out" name="age_out" placeholder="" >
                                             </div>
-                                            <!-- @error('pass_age_out')
+                                            <!-- @error('age_out')
 
                                             {{-- Shows the modal immediately after failed validation/redirect --}}
                                                 @if (count($errors) > 0)
@@ -356,7 +356,7 @@
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_age_out')
+                                                @error('age_out')
                                                 {{-- Shows the modal immediately after failed validation/redirect --}}
                                                     @if (count($errors) > 0)
                                                     <script type="text/javascript" >
@@ -378,17 +378,17 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_id_type_out">ID Type</label>
+                                                <label for="id_type_out">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_type_out" name="pass_id_type_out" placeholder="" >
+                                                <input type="text" class="form-control" id="id_type_out" name="id_type_out" placeholder="" >
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_des_out')
+                                                @error('destination_out')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -397,17 +397,17 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_id_num_out">ID Number</label>
+                                                <label for="id_num_out">ID Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_id_num_out" name="pass_id_num_out" placeholder="" >
+                                                <input type="text" class="form-control" id="id_num_out" name="id_num_out" placeholder="" >
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_id_num_out')
+                                                @error('id_num_out')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -419,10 +419,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_trans_mode_out">Mode of Transport</label>
+                                                <label for="trans_mode_out">Mode of Transport</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_trans_mode" name="pass_trans_mode" placeholder="">
+                                                <input type="text" class="form-control" id="trans_mode" name="trans_mode" placeholder="">
                                                 <small id="help" class="form-text text-muted">e.g. Walking, Delivery Vehicle, PUV, Private Vehicle, Company Vehicle, etc.</small>
                                             </div>
                                         </div>
@@ -430,7 +430,7 @@
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_trans_mode_out')
+                                                @error('trans_mode_out')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -439,10 +439,10 @@
                                     <div class="form-group col-md-6">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label for="pass_plate_num_out">Vehicle Plate Number</label>
+                                                <label for="plate_num_out">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="pass_plate_num_out" name="pass_plate_num_out" placeholder="" >
+                                                <input type="text" class="form-control" id="plate_num_out" name="plate_num_out" placeholder="" >
                                                 <small id="help" class="form-text text-muted">If none, please indicate '-'</small>
                                             </div>
                                         </div>
@@ -450,7 +450,7 @@
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('pass_plate_num_out')
+                                                @error('plate_num_out')
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -461,17 +461,17 @@
                                 <div class="form-group">
                                     <div class="form-row">
                                         <div class="col-2">
-                                            <label for="pass_purpose_out">Purpose</label>
+                                            <label for="purpose_out">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                            <textarea class="form-control" id="pass_purpose_out" name="pass_purpose_out" rows="3" ></textarea>
+                                            <textarea class="form-control" id="purpose_out" name="purpose_out" rows="3" ></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-2">
                                         </div>
                                         <div class="col-10">
-                                            @error('pass_purpose_out')
+                                            @error('purpose_out')
                                                 <small style="color: red;">{{ $message }}</small>
                                             @enderror
                                         </div>
@@ -481,17 +481,17 @@
                                 <div class="form-group">
                                     <div class="form-row">
                                         <div class="col-2">
-                                            <label for="pass_des">Destination</label>
+                                            <label for="destination">Destination</label>
                                         </div>
                                         <div class="col-10">
-                                            <textarea class="form-control" id="pass_des" name="pass_des" rows="3"></textarea>
+                                            <textarea class="form-control" id="destination" name="destination" rows="3"></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-2">
                                         </div>
                                         <div class="col-10">
-                                            @error('pass_des_out')
+                                            @error('destination_out')
                                                 <small style="color: red;">{{ $message }}</small>
                                             @enderror
                                         </div>
@@ -520,7 +520,7 @@
                                     </div>
                                 </div>
 
-                                <input type="hidden" name="pass_ingoing_or_outgoing" value="1">
+                                <input type="hidden" name="direction" value="1">
                                 
                                 
                                 
@@ -553,16 +553,16 @@
                                 <tr>
                                     <td>{{$passerbys->created_at->format('F j,Y h:i:s a') }}</td>
                                     <td>{{$passerbys->pass_border}}</td> 
-                                    <td>{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}</td>
+                                    <td>{{$passerbys->first_name}} {{$passerbys->last_name}}</td>
                                     <td>
-                                        @if ($passerbys->pass_ingoing_or_outgoing==0)
+                                        @if ($passerbys->direction==0)
                                         Ingoing
                                         @else 
                                         Outgoing
                                         @endif
                                     </td>
                                     </td>
-                                    <td>{{$passerbys->pass_plate_num}} </td>
+                                    <td>{{$passerbys->plate_num}} </td>
                                     <!-- View Button Trigger -->
                                     <td>
                                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#viewDetails{{$passerbys->id}}">VIEW</button>
@@ -573,7 +573,7 @@
                                                 <div class="modal-content">
                                                     <!-- View Header -->
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title" id="exampleModalLongTitle">{{$passerbys->pass_first_name}} {{$passerbys->pass_last_name}}'s Form</h4>
+                                                        <h4 class="modal-title" id="exampleModalLongTitle">{{$passerbys->first_name}} {{$passerbys->last_name}}'s Form</h4>
                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
@@ -588,7 +588,7 @@
                                                                             <h5 style="font-size: 15px;">First Name:</h5>
                                                                         </div>
                                                                         <div class="col-8">
-                                                                            <p style="color: blue;">{{$passerbys->pass_first_name}}</p>
+                                                                            <p style="color: blue;">{{$passerbys->first_name}}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -598,7 +598,7 @@
                                                                             <h5 style="font-size: 15px;">Last Name:</h5>
                                                                         </div>
                                                                         <div class="col-8">
-                                                                            <p style="color: blue;">{{$passerbys->pass_last_name}}</p>
+                                                                            <p style="color: blue;">{{$passerbys->last_name}}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -611,7 +611,7 @@
                                                                             <h5 style="font-size: 15px;">Age:</h5>
                                                                         </div>
                                                                         <div class="col-8">
-                                                                            <p style="color: blue;">{{$passerbys->pass_age}}</p>
+                                                                            <p style="color: blue;">{{$passerbys->age}}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -624,7 +624,7 @@
                                                                             <h5 style="font-size: 15px;">ID Type:</h5>
                                                                         </div>
                                                                         <div class="col-8">
-                                                                            <p style="color: blue;">{{$passerbys->pass_id_type}}</p>
+                                                                            <p style="color: blue;">{{$passerbys->id_type}}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -634,7 +634,7 @@
                                                                             <h5 style="font-size: 15px;">ID Number:</h5>
                                                                         </div>
                                                                         <div class="col-8">
-                                                                            <p style="color: blue;">{{$passerbys->pass_id_num}}</p>
+                                                                            <p style="color: blue;">{{$passerbys->id_num}}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -647,7 +647,7 @@
                                                                             <h5 style="font-size: 15px;">Mode of Transport:</h5>
                                                                         </div>
                                                                         <div class="col-8">
-                                                                            <p style="color: blue;">{{$passerbys->pass_trans_mode}}</p>
+                                                                            <p style="color: blue;">{{$passerbys->trans_mode}}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -657,7 +657,7 @@
                                                                             <h5 style="font-size: 15px;">Vehicle Plate Number:</h5>
                                                                         </div>
                                                                         <div class="col-8">
-                                                                            <p style="color: blue;">{{$passerbys->pass_plate_num}}</p>
+                                                                            <p style="color: blue;">{{$passerbys->plate_num}}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -670,7 +670,7 @@
                                                                             <h5 style="font-size: 15px;">Purpose:</h5>
                                                                         </div>
                                                                         <div class="col-8">
-                                                                            <p style="color: blue;">{{$passerbys->pass_purpose}}</p>
+                                                                            <p style="color: blue;">{{$passerbys->purpose}}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -683,7 +683,7 @@
                                                                             <h5 style="font-size: 15px;">Destination:</h5>
                                                                         </div>
                                                                         <div class="col-8">
-                                                                            <p style="color: blue;">{{$passerbys->pass_des}}</p>
+                                                                            <p style="color: blue;">{{$passerbys->destination}}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>

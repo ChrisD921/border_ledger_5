@@ -23,30 +23,30 @@ class PasserbyStoreRequest extends FormRequest
      */
     public function rules()
     {
-        if (request('pass_ingoing_or_outgoing')==0) {
+        if (request('direction')==0) {
             return [
-                'pass_first_name' => 'required|string|max:255',
-                'pass_last_name' => 'required|string|max:255',
-                'pass_age' => 'required|numeric|max:120',
-                'pass_id_type' => 'required|string',
-                'pass_id_num' => 'required|string',
-                'pass_trans_mode' => 'required',
-                'pass_plate_num' => 'required',
-                'pass_purpose' => 'required|string',
-                'pass_des' => 'required|string',
+                'first_name' => 'required|string|max:255',
+                'last_name' => 'required|string|max:255',
+                'age' => 'required|numeric|max:120',
+                'id_type' => 'required|string',
+                'id_num' => 'required|string',
+                'trans_mode' => 'required',
+                'plate_num' => 'required',
+                'purpose' => 'required|string',
+                'destination' => 'required|string',
                 'pass_border' => 'required|string' 
             ];
         }else{
             return [
-                'pass_first_name_out' => 'required|string|max:255',
-                'pass_last_name_out' => 'required|string|max:255',
-                'pass_age_out' => 'required|numeric|max:120',
-                'pass_id_type_out' => 'required|string',
-                'pass_id_num_out' => 'required|string',
-                'pass_trans_mode_out' => 'required',
-                'pass_plate_num_out' => 'required',
-                'pass_purpose_out' => 'required|string',
-                'pass_des_out' => 'required|string',
+                'first_name_out' => 'required|string|max:255',
+                'last_name_out' => 'required|string|max:255',
+                'age_out' => 'required|numeric|max:120',
+                'id_type_out' => 'required|string',
+                'id_num_out' => 'required|string',
+                'trans_mode_out' => 'required',
+                'plate_num_out' => 'required',
+                'purpose_out' => 'required|string',
+                'destination_out' => 'required|string',
                 'pass_border_out' => 'required|string' 
             ];
             
@@ -58,19 +58,19 @@ class PasserbyStoreRequest extends FormRequest
     public function messages()
     {
         return [
-            'pass_first_name.required' => "The Passerby's First Name is required!",
-            'pass_last_name.required' => "The Passerby's Last Name is required!",
-            'pass_age.required' => "The Passerby's Age is required!",
-            'pass_id_type.required' => "The Passerby's ID Type is required!",
-            'pass_id_num.required' => "The Passerby's ID Number is required!",
-            'pass_trans_mode.required' => "The Passerby's Mode of Transportiation is required!",
-            'pass_plate_num.required' => "The Passerby's Plate Number or Lack thereof is required!",
-            'pass_purpose.required' => "The Passerby's Purpose is required!",
-            'pass_des.required' => "The Passerby's Description is required!",
+            'first_name.required' => "The Passerby's First Name is required!",
+            'last_name.required' => "The Passerby's Last Name is required!",
+            'age.required' => "The Passerby's Age is required!",
+            'id_type.required' => "The Passerby's ID Type is required!",
+            'id_num.required' => "The Passerby's ID Number is required!",
+            'trans_mode.required' => "The Passerby's Mode of Transportiation is required!",
+            'plate_num.required' => "The Passerby's Plate Number or Lack thereof is required!",
+            'purpose.required' => "The Passerby's Purpose is required!",
+            'destination.required' => "The Passerby's Description is required!",
             'pass_border.required'=> " The Border handling the Passerby is required!",
 
            
-            'pass_age_out.required' => "The Passerby's Age is required!",
+            'age_out.required' => "The Passerby's Age is required!",
             
         ];
     }

@@ -49,7 +49,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/ledger">Ledger</a>
+                            <a class="nav-link" href="/ledger">Passerby Ledger</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/management">User Management</a>

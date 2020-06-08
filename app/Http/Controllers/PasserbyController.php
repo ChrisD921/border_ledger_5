@@ -38,16 +38,16 @@ class PasserbyController extends Controller
         $passerby = new Passerby();
         $border = new Border();
 
-            if(request('pass_ingoing_or_outgoing')==0){
-                $passerby->pass_first_name= request('pass_first_name');
-                $passerby->pass_last_name= request('pass_last_name');
-                $passerby->pass_age= request('pass_age');
-                $passerby->pass_id_type= request('pass_id_type');
-                $passerby->pass_id_num= request('pass_id_num');
-                $passerby->pass_trans_mode= request('pass_trans_mode');
-                $passerby->pass_plate_num= request('pass_plate_num');
-                $passerby->pass_purpose= request('pass_purpose');
-                $passerby->pass_des= request('pass_des');
+            if(request('direction')==0){
+                $passerby->first_name= request('first_name');
+                $passerby->last_name= request('last_name');
+                $passerby->age= request('age');
+                $passerby->id_type= request('id_type');
+                $passerby->id_num= request('id_num');
+                $passerby->trans_mode= request('trans_mode');
+                $passerby->plate_num= request('plate_num');
+                $passerby->purpose= request('purpose');
+                $passerby->destination= request('destination');
 
                 $passerby->pass_border = request('pass_border');
                 
@@ -55,15 +55,18 @@ class PasserbyController extends Controller
                 $border = new Border();
                 $border->pass_border= request('pass_border');
             }else{
-                $passerby->pass_first_name= request('pass_first_name_out');
-                $passerby->pass_last_name= request('pass_last_name_out');
-                $passerby->pass_age= request('pass_age_out');
-                $passerby->pass_id_type= request('pass_id_type_out');
-                $passerby->pass_id_num= request('pass_id_num_out');
-                $passerby->pass_trans_mode= request('pass_trans_mode_out');
-                $passerby->pass_plate_num= request('pass_plate_num_out');
-                $passerby->pass_purpose= request('pass_purpose_out');
-                $passerby->pass_des= request('pass_des_out');
+                $passerby->first_name= request('first_name_out');
+                $passerby->last_name= request('last_name_out');
+                $passerby->age= request('age_out');
+                $passerby->id_type= request('id_type_out');
+                $passerby->id_num= request('id_num_out');
+                $passerby->trans_mode= request('trans_mode_out');
+                $passerby->plate_num= request('plate_num_out');
+                $passerby->purpose= request('purpose_out');
+                $passerby->destination= request('destination_out');
+
+
+
 
                 $passerby->pass_border = request('pass_border_out');
                 
@@ -72,11 +75,11 @@ class PasserbyController extends Controller
                 $border->pass_border= request('pass_border_out');
 
             }
-        $passerby->pass_ingoing_or_outgoing = request('pass_ingoing_or_outgoing');
+        $passerby->direction = request('direction');
         $passerby->save();
         $border->save();
         
-        return redirect('/ledger')->with('msg' , 'New Passerby Account Successfully Created!');
+        return redirect('/ledger')->with('msg' , 'New Passerby Entry Successfully Created!');
     }
 
     /* AJAX request */
