@@ -51,9 +51,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/ledger">Passerby Ledger</a>
                         </li>
+                        @if(auth()->check() && auth()->user()->is_admin == 1 || auth::guest())
                         <li class="nav-item">
                             <a class="nav-link" href="/management">User Management</a>
                         </li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
