@@ -33,7 +33,7 @@
                                                 <label for="first_name_in">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="first_name_in" name="first_name" placeholder="" >
+                                                <input type="text" class="form-control" id="first_name_in" name="first_name" placeholder="" value="{{old('first_name')}}">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -41,6 +41,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('first_name')
+                                                @if (count($errors) > 0)
+                                                <script type="text/javascript" >
+                                                
+                                                    $(document).ready(function(){
+                        
+                                                    $('#goingin').modal('show'); 
+                                                    });
+                                                    </script>
+                                                @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -52,7 +61,7 @@
                                                 <label for="last_name_in">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="last_name_in" name="last_name" placeholder="" >
+                                                <input type="text" class="form-control" id="last_name_in" name="last_name" placeholder="" value="{{old('last_name')}}" >
                                             </div>
                                         </div>
                                         <div class="row">
@@ -60,6 +69,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('last_name')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingin').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -74,7 +92,7 @@
                                                 <label for="age_in">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="age_in" name="age" placeholder="" >
+                                                <input type="text" class="form-control" id="age_in" name="age" placeholder="" value="{{old('age')}}" >
                                             </div>
                                             <!-- @error('age')
                                             {{-- Shows the modal immediately after failed validation/redirect --}}
@@ -119,7 +137,7 @@
                                                 <label for="id_type_in">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="id_type_in"  name="id_type" placeholder="" >
+                                                <input type="text" class="form-control" id="id_type_in"  name="id_type" placeholder="" value="{{old('id_type')}}">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -127,6 +145,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('id_type')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingin').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -138,7 +165,7 @@
                                                 <label for="id_num_in">ID Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="id_num_in" name="id_num" placeholder="" >
+                                                <input type="text" class="form-control" id="id_num_in" name="id_num" placeholder="" value="{{old('id_num')}}">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -146,6 +173,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('id_num')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingin').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -160,7 +196,7 @@
                                                 <label for="trans_mode_in">Mode of Transport</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="trans_mode_in" name="trans_mode" placeholder="">
+                                                <input type="text" class="form-control" id="trans_mode_in" name="trans_mode" placeholder="" value="{{old('trans_mode')}}">
                                                 <small id="help" class="form-text text-muted">e.g. Walking, Delivery Vehicle, PUV, Private Vehicle, Company Vehicle, etc.</small>
                                             </div>
                                         </div>
@@ -169,6 +205,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('trans_mode')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingin').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -180,7 +225,7 @@
                                                 <label for="plate_num_in">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="plate_num_in" name="plate_num" placeholder="" >
+                                                <input type="text" class="form-control" id="plate_num_in" name="plate_num" placeholder="" value="{{old('plate_num')}}">
                                                 <small id="help" class="form-text text-muted">If none, please indicate '-'</small>
                                             </div>
                                         </div>
@@ -189,6 +234,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('plate_num')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingin').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -202,7 +256,7 @@
                                             <label for="purpose_in">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                            <textarea class="form-control" id="purpose_in" name="purpose" rows="3" ></textarea>
+                                            <textarea class="form-control" id="purpose_in" name="purpose" rows="3" >{{old('purpose')}}</textarea>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -210,6 +264,15 @@
                                         </div>
                                         <div class="col-10">
                                             @error('purpose')
+                                            @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingin').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                 <small style="color: red;">{{ $message }}</small>
                                             @enderror
                                         </div>
@@ -222,14 +285,23 @@
                                             <label for="destination_in">Destination</label>
                                         </div>
                                         <div class="col-10">
-                                            <textarea class="form-control" id="destination_in" name="destination" rows="3"></textarea>
+                                            <textarea class="form-control" id="destination_in" name="destination" rows="3">{{old('destination')}}</textarea>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-2">
                                         </div>
                                         <div class="col-10">
-                                            @error('pass_des')
+                                            @error('destination')
+                                            @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingin').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                 <small style="color: red;">{{ $message }}</small>
                                             @enderror
                                         </div>
@@ -243,7 +315,11 @@
                                                 <label for="border_name_in">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="border_name_in" name="border_name" class="form-control" style="width:100%" >
+                                                <select id="border_name_in" name="border_name"  class="form-control" style="width:100%" >
+                                                     {{-- This code shows the previously selected border_name so the users don't have to input it again! --}}
+                                                    @if(Request::old('border_name') != NULL)
+                                                        <option value="{{Request::old('border_name')}}"> {{Request::old('border_name')}}</option>
+                                                    @endif
                                                 </select>
                                             </div>
                                         </div>
@@ -252,6 +328,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('border_name')
+                                                @if (count($errors) > 0)
+                                                <script type="text/javascript" >
+                                                
+                                                    $(document).ready(function(){
+                        
+                                                    $('#goingin').modal('show'); 
+                                                    });
+                                                    </script>
+                                                @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -294,7 +379,7 @@
                                                 <label for="first_name_out">First Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="first_name_out" name="first_name_out" placeholder="" >
+                                                <input type="text" class="form-control" id="first_name_out" name="first_name_out" placeholder="" value="{{old('first_name_out')}}" >
                                             </div>
                                         </div>
                                         <div class="row">
@@ -302,6 +387,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('first_name_out')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingout').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -313,7 +407,7 @@
                                                 <label for="last_name_out">Last Name</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="last_name_out" name="last_name_out" placeholder="" >
+                                                <input type="text" class="form-control" id="last_name_out" name="last_name_out" placeholder="" value="{{old('last_name_out')}}" >
                                             </div>
                                         </div>
                                         <div class="row">
@@ -321,6 +415,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('last_name_out')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingout').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -335,7 +438,7 @@
                                                 <label for="age_out">Age</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="age_out" name="age_out" placeholder="" >
+                                                <input type="text" class="form-control" id="age_out" name="age_out" placeholder="" value="{{old('age_out')}}">
                                             </div>
                                             <!-- @error('age_out')
 
@@ -381,14 +484,23 @@
                                                 <label for="id_type_out">ID Type</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="id_type_out" name="id_type_out" placeholder="" >
+                                                <input type="text" class="form-control" id="id_type_out" name="id_type_out" placeholder="" value="{{old('id_type_out')}}">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-4">
                                             </div>
                                             <div class="col-8">
-                                                @error('destination_out')
+                                                @error('id_type_out')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingout').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -400,7 +512,7 @@
                                                 <label for="id_num_out">ID Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="id_num_out" name="id_num_out" placeholder="" >
+                                                <input type="text" class="form-control" id="id_num_out" name="id_num_out" placeholder="" value="{{old('id_num_out')}}">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -408,6 +520,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('id_num_out')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingout').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -422,7 +543,7 @@
                                                 <label for="trans_mode_out">Mode of Transport</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="trans_mode" name="trans_mode" placeholder="">
+                                                <input type="text" class="form-control" id="trans_mode" name="trans_mode_out" placeholder="" value="{{old('trans_mode_out')}}">
                                                 <small id="help" class="form-text text-muted">e.g. Walking, Delivery Vehicle, PUV, Private Vehicle, Company Vehicle, etc.</small>
                                             </div>
                                         </div>
@@ -431,6 +552,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('trans_mode_out')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingout').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -442,7 +572,7 @@
                                                 <label for="plate_num_out">Vehicle Plate Number</label>
                                             </div>
                                             <div class="col-8">
-                                                <input type="text" class="form-control" id="plate_num_out" name="plate_num_out" placeholder="" >
+                                                <input type="text" class="form-control" id="plate_num_out" name="plate_num_out" placeholder="" value="{{old('plate_num_out')}}" >
                                                 <small id="help" class="form-text text-muted">If none, please indicate '-'</small>
                                             </div>
                                         </div>
@@ -451,6 +581,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('plate_num_out')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingout').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>
@@ -464,7 +603,7 @@
                                             <label for="purpose_out">Purpose</label>
                                         </div>
                                         <div class="col-10">
-                                            <textarea class="form-control" id="purpose_out" name="purpose_out" rows="3" ></textarea>
+                                            <textarea class="form-control" id="purpose_out" name="purpose_out" rows="3" >{{old('purpose_out')}}</textarea>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -472,6 +611,15 @@
                                         </div>
                                         <div class="col-10">
                                             @error('purpose_out')
+                                            @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingout').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                 <small style="color: red;">{{ $message }}</small>
                                             @enderror
                                         </div>
@@ -484,7 +632,7 @@
                                             <label for="destination">Destination</label>
                                         </div>
                                         <div class="col-10">
-                                            <textarea class="form-control" id="destination" name="destination" rows="3"></textarea>
+                                            <textarea class="form-control" id="destination" name="destination_out" rows="3">{{old('destination_out')}}</textarea>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -492,6 +640,15 @@
                                         </div>
                                         <div class="col-10">
                                             @error('destination_out')
+                                            @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingout').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                 <small style="color: red;">{{ $message }}</small>
                                             @enderror
                                         </div>
@@ -505,7 +662,12 @@
                                                 <label for="border_name_out">Border</label>
                                             </div>
                                             <div class="col-8">
-                                                <select id="border_name_out" name="border_name_out" class="form-control" style="width:100%" ></select>
+                                                <select id="border_name_out" name="border_name_out" class="form-control" style="width:100%" >
+                                                       {{-- This code shows the previously selected border_name so the users don't have to input it again! --}}
+                                                        @if(Request::old('border_name_out') != NULL)
+                                                            <option value="{{Request::old('border_name_out')}}"> {{Request::old('border_name_out')}}</option>
+                                                          @endif      
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -513,6 +675,15 @@
                                             </div>
                                             <div class="col-8">
                                                 @error('border_name_out')
+                                                @if (count($errors) > 0)
+                                                    <script type="text/javascript" >
+                                                    
+                                                        $(document).ready(function(){
+                            
+                                                        $('#goingout').modal('show'); 
+                                                        });
+                                                        </script>
+                                                    @endif
                                                     <small style="color: red;">{{ $message }}</small>
                                                 @enderror
                                             </div>

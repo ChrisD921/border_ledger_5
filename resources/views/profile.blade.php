@@ -45,7 +45,7 @@
 
                                 @error('first_name')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <small style="color: red;">{{ $message }}</small>
                                     </span>
                                 @enderror
                             </div>
@@ -58,7 +58,7 @@
 
                                 @error('last_name')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <small style="color: red;">{{ $message }}</small>
                                     </span>
                                 @enderror
                             </div>
@@ -72,7 +72,7 @@
 
                                 @error('date_of_birth')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <small style="color: red;">{{ $message }}</small>
                                     </span>
                                 @enderror
                             </div>
@@ -85,7 +85,7 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <small style="color: red;">{{ $message }}</small>
                                     </span>
                                 @enderror
                             </div>
@@ -99,7 +99,7 @@
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <small style="color: red;">{{ $message }}</small>
                                     </span>
                                 @enderror
                             </div>

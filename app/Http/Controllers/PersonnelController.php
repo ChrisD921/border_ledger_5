@@ -73,7 +73,19 @@ class PersonnelController extends Controller
             $personnel->last_name = request('last_name');
             $personnel->date_of_birth = request('date_of_birth');
             $personnel->email = request('email');
-            $personnel->password =Hash::make( request('password'));
+           // $personnel->password =Hash::make( request('password'));
+
+            // if(Hash::make( request('password'))==Hash::make($personnel->password)){
+
+            // }else{
+               
+            // }
+            
+            if (Hash::check(request('password'), Hash::make($personnel->password))) {
+                // The passwords match...
+            }else{
+                $personnel->password =Hash::make( request('password'));
+            }
     
             $personnel->save();
         return redirect('/profile')->with('msg' , 'Personnel Account Successfully Edited!');

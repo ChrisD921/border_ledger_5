@@ -43,7 +43,7 @@ class PersonnelStoreRequest extends FormRequest
             'email.required' => 'Email is required!',
             'email.unique' => 'That email has already been taken!',
             'password.required' => 'Password is required!',
-            'password.confirmed' => ' The Password must match with the Password Confirmation!'
+            'password.confirmed' => ' The Password must match with Confirm Password!'
         ];
     }
 }

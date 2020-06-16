@@ -1,14 +1,15 @@
 @extends('layouts.app')
 
-
 @section('content')
+
 <section class="jumbotron text-center">
     <div class="jumbotron">
-        <p>Hello this is the Managment screen!</p>
-      <h1 class="jumbotron-heading">Border Ledger</h1>
+      <h1 class="jumbotron-heading">User Managment</h1>
+
       <p class="msg"> {{ session('msg') }}</p>
     
       <a href="#" class="btn btn-primary my-2" data-toggle="modal" data-target="#createPersonnel">Create Personnel Account</a>
+      
       {{-- Modal Form to create more Personnel Accounts --}}
     <div class="modal fade" id="createPersonnel" role="dialog">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -30,9 +31,9 @@
                                     <label for="first_name">First Name:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="text" class="form-control" name="first_name" id="first_name" name="first_name" >
+                                    <input type="text" class="form-control" name="first_name" id="first_name" name="first_name" value="{{old('first_name')}}" >
                                     @error('first_name')
-                                        <strong>{{ $message }}</strong>
+                                        <small style="color: red;">{{ $message }}</small>
                                     @enderror 
                                     <br>
                                 </div>
@@ -42,9 +43,9 @@
                                     <label for="last_name">Last Name:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="text" class="form-control" id="last_name" name="last_name" >
+                                    <input type="text" class="form-control" id="last_name" name="last_name" value="{{old('last_name')}}" >
                                     @error('last_name')
-                                        <strong>{{ $message }}</strong>
+                                        <small style="color: red;">{{ $message }}</small>   
                                     @enderror
                                     <br>
                                 </div>
@@ -54,9 +55,9 @@
                                     <label for="date_of_birth">Date of Birth:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" >
+                                    <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" value="{{old('date_of_birth')}}" >
                                     @error('date_of_birth')
-                                        <strong>{{ $message }}</strong>
+                                        <small style="color: red;">{{ $message }}</small>
                                     @enderror
                                     <br>
                                 </div>
@@ -66,9 +67,9 @@
                                     <label for="email">Email:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="email" class="form-control" id="email" name="email" >
+                                    <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}" >
                                     @error('email')
-                                        <strong>{{ $message }}</strong>
+                                        <small style="color: red;">{{ $message }}</small>
                                     @enderror
                                     <br>
                                 </div>
@@ -78,9 +79,9 @@
                                     <label for="password">Password:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input type="password" class="form-control" id="password" name="password" >  
+                                    <input type="password" class="form-control" id="password" name="password" value="{{old('password')}}" >  
                                     @error('password')
-                                        <strong>{{ $message }}</strong>
+                                        <small style="color: red;">{{ $message }}</small>
                                     @enderror
                                     <br>
                                 </div>
@@ -90,9 +91,9 @@
                                     <label for="password-confirm" >Confirm Password:</label>
                                 </div>
                                 <div class="col-9">
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation"   autocomplete="new-password">
+                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation"   >
                                     @error('password-confirm')
-                                        <strong>{{ $message }}</strong>
+                                        <small style="color: red;">{{ $message }}</small>
                                     @enderror
                                     <br>
                                 </div>

@@ -66,11 +66,21 @@ class PasserbyStoreRequest extends FormRequest
             'trans_mode.required' => "The Passerby's Mode of Transportiation is required!",
             'plate_num.required' => "The Passerby's Plate Number or Lack thereof is required!",
             'purpose.required' => "The Passerby's Purpose is required!",
-            'destination.required' => "The Passerby's Description is required!",
+            'destination.required' => "The Passerby's Destination is required!",
             'border_name.required'=> " The Border handling the Passerby is required!",
 
-           
+            'first_name_out.required' => "The Passerby's First Name is required!",
+            'last_name_out.required' => "The Passerby's Last Name is required!",
             'age_out.required' => "The Passerby's Age is required!",
+            'id_type_out.required' => "The Passerby's ID Type is required!",
+            'id_num_out.required' => "The Passerby's ID Number is required!",
+            'trans_mode_out.required' => "The Passerby's Mode of Transportiation is required!",
+            'plate_num_out.required' => "The Passerby's Plate Number or Lack thereof is required!",
+            'purpose_out.required' => "The Passerby's Purpose is required!",
+            'destination_out.required' => "The Passerby's Destination is required!",
+            'border_name_out.required'=> " The Border handling the Passerby is required!",
+
+            
             
         ];
     }
