@@ -32,7 +32,7 @@ class ProfileStoreRequest extends FormRequest
                 'required',
                 Rule::unique('users', 'email')->ignore(auth()->user()->id),
             ],
-            'password' => 'required|confirmed',
+            'password' => 'confirmed',
             
         ];
     }
@@ -49,7 +49,7 @@ class ProfileStoreRequest extends FormRequest
             'date_of_birth.date' => 'Date of Birth must be in Date Format!',
             'email.required' => 'Email is required!',
             'email.unique' => 'That email has already been taken!',
-            'password.required' => 'Password is required!',
+            // 'password.required' => 'Password is required!',
             'password.confirmed' => ' The Password must match with the Password Confirmation!'
         ];
     }
